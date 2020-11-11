@@ -1,0 +1,41 @@
+---
+layout: base
+---
+<div class="container-md">
+    <div class="hero-bg pt-7 pt-sm-11 pt-md-13 mb-7 mt-5">
+        <div class="ef-workHeader position-relative">
+            <h1 class="h1 my-0 ml-2">
+                <span class="title-font underlineBlue">
+                    My work
+                </span>
+            </h1>
+        </div>
+    </div>
+
+    <div class="mb-5">
+
+        <div class="d-flex align-items-center flex-wrap mb-n2">
+            <a href="/projects/" class="ef-chip py-1{% if page.url === '/projects/' %} -active{% endif %} px-2 action-font mb-2">All ({{ collections.videos.length }})</a>
+            {% for tag in collections.videoTagList %}
+                <a href="/projects/{{ tag | slug }}/" class="ef-chip{% if page.url === ('/projects/'+tag+'/') %} -active{% endif %} py-1 px-2 action-font mb-2">{{ tag }} ({{ collections[tag].length }})</a>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="row align-items-stretch">
+        {% import "components/video-item.njk" as macro %}
+        {% if tag %}
+            {% set vidCollection = collections[tag] %}
+            {% else %}
+            {% set vidCollection = collections.videos %}
+        {% endif %}
+        {% for video in vidCollection %}
+            <div class="col-12 col-sm-6 col-lg-4 mb-5">
+                {% if video.data.description %}
+                    {{ macro.videoItem(video.data.href,video.data.title,video.data.description,video.url,"") }}
+                {% else %}
+                    {{ macro.videoItem(video.data.href,video.data.title,"","","") }}
+                {% endif %}
+            </div>
+        {% endfor %}
+    </div>
+</div>

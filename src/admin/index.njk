@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Content Manager</title>
+	<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+	<style>
+		HTML[data-whatintent] BODY .netlify-cms-hide {
+			display: none !important;
+		}
+	</style>
+</head>
+<body>
+<!-- Include the script that builds the page and powers Netlify CMS -->
+<script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
+<script>
+	CMS.registerPreviewStyle("https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css");
+	CMS.registerPreviewStyle("{{ paths.cssPath }}/styles.css");
+</script>
+</body>
+</html>

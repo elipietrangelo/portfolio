@@ -1,0 +1,22 @@
+{% macro videoItem(href,title,description,readmore,addClasses) %}
+    <article class="ef-videoItem d-flex flex-column cursor-pointer position-relative">
+        <div class="ef-videoItem__video px-2">
+            <div class="embed-responsive embed-responsive-16by9">
+                <div class="embed-responsive-item centered-bgi"
+                     style="background-image:url(https://img.youtube.com/vi/{{ href }}/hqdefault.jpg);" data-id="{{ href }}">
+                    <span class="ef-videoItem__play contained-bgi"></span>
+                </div>
+            </div>
+        </div>
+        <div class="ef-videoItem__content d-flex flex-column p-2 flex-grow-1 position-relative">
+            <h2 class="action-font text-big">{{ title }}</h2>
+            {% if description %}
+                <p class="text-small mb-3">{{ description | truncate(128) }}</p>
+                <div class="d-flex mt-auto">
+                    <a href="{{ readmore }}" class="ef-videoItem__more action-font text-uppercase text-small stretched-link">Read more</a>
+                </div>
+            {% else %}
+            {% endif %}
+        </div>
+    </article>
+{% endmacro %}

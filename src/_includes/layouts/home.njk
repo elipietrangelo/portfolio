@@ -1,0 +1,13 @@
+---
+layout: base-login
+---
+{% set workNavElt = collections.all | eleventyNavigation %}
+{% for elt in workNavElt %}
+    {% if elt.key === "hero" %}
+    {% else %}
+        <section class="ef-section ef-{{ elt.key }}{% if elt.key === "about" or elt.key === "contact" %}{% else %} mb-10 mb-md-13{% endif %}" id="{{ elt.key }}">
+            {% include "components/layout/home-sections/"+elt.key+".njk" %}
+        </section>
+    {% endif %}
+{% endfor %}
+{% include "components/video-modal.njk" %}

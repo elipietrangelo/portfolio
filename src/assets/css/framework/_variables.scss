@@ -1,0 +1,210 @@
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+
+$namespace: "ef-";
+$mediaPath: "/media/";
+
+$action-font: "Roboto Condensed", sans-serif;
+$title-font: "Anton" ,sans-serif;
+$body-font: "Open Sans", sans-serif;
+
+//Components
+
+$border-width:                3px;
+
+// Grid columns
+//
+// Set the number of columns and specify the width of the gutters.
+
+$grid-gutter-width:           30px;
+
+// Links
+//
+// Style anchor elements.
+
+//$hero-bg: #FAF1E5;
+//$crimson: #E67975;
+//$lightblue: #D8E8FA;
+
+$hero-bg: #FFEEBD; //#F5DF9D
+$crimson: #F590A2;
+$lightblue: #9BC7F7;
+
+$primary:       #FAF1E5;
+$secondary:     #3EC270;
+$secondary-variation:     #2B7548;
+$success:       $green !default;
+$info:          $cyan !default;
+$warning:       $yellow !default;
+$danger:        $red !default;
+$light:         $gray-100 !default;
+$dark:          $gray-800 !default;
+$light-gray:          #f4f4f4;
+
+$theme-colors: ();
+$theme-colors: map-merge(
+	(
+		"primary":     $primary,
+		"secondary":   $secondary,
+		"secondary-d": $secondary-variation,
+		"info":       $info,
+		"warning":    $warning,
+		"danger":     $danger,
+		"light":      $light,
+		"dark":       $dark,
+		"light-gray":       $light-gray
+	),
+	$theme-colors
+);
+
+$body-color:                $dark;
+
+// Typography
+//
+// Font, line-height, and color for body text, headings, and more.
+
+// stylelint-disable value-keyword-case
+$font-family-sans-serif:      -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+$font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+$font-family-base:            $font-family-sans-serif !default;
+// stylelint-enable value-keyword-case
+
+$font-size-base:              1rem !default; // Assumes the browser default, typically `16px`
+$font-size-lg:                $font-size-base * 1.15;
+$font-size-xl:                $font-size-base * 1.25;
+$font-size-sm:                $font-size-base * .85;
+
+$font-weight-lighter:         lighter !default;
+$font-weight-light:           300 !default;
+$font-weight-normal:          400 !default;
+$font-weight-bold:            700 !default;
+$font-weight-bolder:          bolder !default;
+
+$font-weight-base:            $font-weight-normal !default;
+$line-height-base:            1.4;
+
+$h1-font-size:                $font-size-base * 2.2;
+$h2-font-size:                $font-size-base * 1.9;
+$h3-font-size:                $font-size-base * 1.5;
+$h4-font-size:                $font-size-base * 1.3;
+
+$headings-margin-bottom:      $spacer / 2 !default;
+$headings-font-family:        null !default;
+$headings-font-weight:        500 !default;
+$headings-line-height:        1;
+$headings-color:              null !default;
+
+$display1-size:               6rem !default;
+$display2-size:               5.5rem !default;
+$display3-size:               4.5rem !default;
+$display4-size:               3.5rem !default;
+
+$display1-weight:             300 !default;
+$display2-weight:             300 !default;
+$display3-weight:             300 !default;
+$display4-weight:             300 !default;
+$display-line-height:         $headings-line-height !default;
+
+$lead-font-size:              $font-size-base * 1.25 !default;
+$lead-font-weight:            300 !default;
+
+$small-font-size:             80% !default;
+
+$text-muted:                  $gray-600 !default;
+
+$blockquote-small-color:      $gray-600 !default;
+$blockquote-small-font-size:  $small-font-size !default;
+$blockquote-font-size:        $font-size-base * 1.25 !default;
+
+$hr-border-color:             rgba($black, .1) !default;
+$hr-border-width:             $border-width !default;
+
+$mark-padding:                .2em !default;
+
+$dt-font-weight:              $font-weight-bold !default;
+
+$kbd-box-shadow:              inset 0 -.1rem 0 rgba($black, .25) !default;
+$nested-kbd-font-weight:      $font-weight-bold !default;
+
+$list-inline-padding:         .5rem !default;
+
+$mark-bg:                     #fcf8e3 !default;
+
+$hr-margin-y:                 $spacer !default;
+
+// Navbar
+
+$navbar-height: 					60px;
+// Compute the navbar-brand padding-y so the navbar-brand will have the same height as navbar-text and nav-link
+$nav-link-height:                   0;
+$navbar-brand-height:               0;
+$navbar-brand-padding-y:            0;
+
+$navbar-toggler-padding-y:          .25rem !default;
+$navbar-toggler-padding-x:          .75rem !default;
+$navbar-toggler-font-size:          $font-size-lg !default;
+$navbar-toggler-border-radius:      0;
+
+// Spacing
+//
+// Control the default styling of most Bootstrap elements by modifying these
+// variables. Mostly focused on spacing.
+// You can add more entries to the $spacers map, should you need more variation.
+
+$spacer: 1em;
+$spacers: ();
+$spacers: map-merge(
+	(
+			0: 0,
+			1: ($spacer * .25),
+			2: ($spacer * .5),
+			3: $spacer,
+			4: ($spacer * 1.5),
+			5: ($spacer * 2),
+			6: ($spacer * 2.5),
+			7: ($spacer * 3),
+			8: ($spacer * 3.5),
+			9: ($spacer * 4),
+			10: ($spacer * 5),
+			11: ($spacer * 6),
+			12: ($spacer * 7),
+			13: ($spacer * 10)
+	),
+	$spacers
+);
+
+// Buttons
+//
+// For each of Bootstrap's buttons, define text, background, and border color.
+
+$btn-padding-y:               $spacer*0.65;
+$btn-padding-x:               $spacer*1.65;
+$btn-white-space:             null !default; // Set to `nowrap` to prevent text wrapping
+$btn-padding-y-sm:            $input-btn-padding-y-sm !default;
+$btn-padding-x-sm:            $input-btn-padding-x-sm !default;
+$btn-font-size-sm:            $input-btn-font-size-sm !default;
+$btn-line-height-sm:          $input-btn-line-height-sm !default;
+
+$btn-padding-y-lg:            $spacer*0.5;
+$btn-padding-x-lg:            $spacer*1.5;
+$btn-font-size-lg:            1rem;
+$btn-line-height-lg:          $input-btn-line-height-lg !default;
+$btn-border-width:            3px;
+
+$btn-font-weight:             $font-weight-bold;
+$btn-box-shadow:              none;
+$btn-focus-width:             auto;
+$btn-focus-box-shadow:        none;
+$btn-active-box-shadow:       none;
+
+
+
+// Allows for customizing button radius independently from global border radius
+$btn-border-radius:           0;
+$btn-border-radius-lg:        0;
+$btn-border-radius-sm:        0;
+
+$btn-transition:              color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out !default;
+
+
+@import "bootstrap/scss/variables";

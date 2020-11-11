@@ -1,0 +1,9 @@
+@mixin make-col-negative-offset-right($size, $columns: $grid-columns) {
+	$num: $size / $columns;
+	margin-right: if($num == 0, 0, percentage($num));
+}
+
+@mixin make-col-negative-offset-left($size, $columns: $grid-columns) {
+	$num: $size / $columns;
+	margin-left: - if($num == 0, 0, percentage($num));
+}

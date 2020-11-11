@@ -1,0 +1,157 @@
+.#{$namespace}videoItem {
+	
+	/* Save root element context for easy access if nesting is needed */
+	
+	$self: &;
+	
+	
+	/* variables specific to current element */
+	
+	$play-dimensions: 2.5rem;
+	
+	/* properties of current element  + media queries */
+	
+	transition: color 0.25s linear;
+	
+	/* Pseudo Elements */
+	
+	&::before {
+		
+		content:"";
+		background-color: $lightblue;
+		padding-top: 9/16*100%;
+		width: 100%;
+		position: absolute;
+		top: map_get($spacers,1);
+		left: 0;
+		height: 0;
+		transition: background-color 0.25s linear, height 0.25s ease-in-out;
+	}
+	
+	&::after {
+	}
+	
+	/*
+	Include elements that are linked to the current element but have to reside at the root level of the stylesheet
+	(e.g: keyframes)
+	*/
+	@at-root {
+	}
+	
+	
+	/* children - write selector in full in comments in order to facilitate search */
+	
+	// videoItem__childElement
+	&__video {
+		
+		// follows same logic as parent
+		&:hover {
+			
+			@media (hover: hover) {
+				
+				#{$self}__play {
+					transform: scale(0.75);
+				}
+				
+			}
+			
+		}
+	}
+	
+	&__content {
+		
+		@media (hover: hover) {
+			
+			&:hover {
+				
+				#{$self}__more {
+					
+					color: $dark;
+					background-size: 100% 50%;
+					
+				}
+				
+			}
+			
+		}
+		
+	}
+	
+	// videoItem__play
+	&__play {
+		
+		width: $play-dimensions;
+		height: $play-dimensions;
+		position: absolute;
+		z-index: z("low");
+		bottom: 0.5em;
+		left: 0.5em;
+		transition: all 0.15s linear;
+		cursor: pointer;
+		background-image: url("#{$mediaPath}play-button.svg");
+		
+	}
+	
+	&__more {
+		
+		color: $crimson;
+		@include textUnderlineGradient($crimson,0 0.65em,0 50%);
+		transition: color 0.25s linear, background-size 0.25s ease-out;
+		font-weight: 900;
+		
+	}
+	
+	
+	/* modifiers */
+	
+	// videoItem -altStyle
+	&.-playing {
+		
+		// follows same logic as base element
+		
+		color: #FFF;
+		
+		&::before {
+			
+			height: 100%;
+			background-color: $dark;
+			
+		}
+		
+		#{$self}__more {
+			
+			color: $dark;
+			background-position: 0 0;
+			background-size: 100% 100%;
+			padding: 0 0.2em;
+		}
+		
+	}
+	
+	
+	/* Pseudo Classes */
+	
+	&:hover {
+		@media (hover: hover) {
+			
+		}
+	}
+	
+	&:focus {
+	}
+	
+	&:active {
+	}
+	
+	&:focus,
+	&:active {
+	}
+	
+	/* random parent element */
+	/* 
+	*
+	*   Syntax : .randomParentElt & {}
+	*
+	*/
+	
+}

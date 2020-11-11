@@ -1,0 +1,38 @@
+{
+  "name": "elisa-filmmaker",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "del11ty": "gulp deleteDist",
+    "build11y": "eleventy & gulp styles",
+    "start11ty": "gulp serve & eleventy --serve",
+    "postinstall": "link-module-alias"
+  },
+  "_moduleAliases": {
+    "config": "./config.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@11ty/eleventy": "^0.11.0",
+    "@11ty/eleventy-navigation": "^0.1.6",
+    "autoprefixer": "^9.8.4",
+    "babelify": "^10.0.0",
+    "bootstrap": "^4.5.2",
+    "cssnano": "^4.1.10",
+    "del": "^5.1.0",
+    "gulp": "^4.0.2",
+    "gulp-bro": "^2.0.0",
+    "gulp-postcss": "^8.0.0",
+    "gulp-sass": "^4.1.0",
+    "gulp-sass-glob": "^1.1.0",
+    "gulp-size": "^3.0.0",
+    "link-module-alias": "^1.2.0",
+    "markdown-it": "^11.0.0",
+    "path": "^0.12.7",
+    "slugify": "^1.4.5"
+  }
+}

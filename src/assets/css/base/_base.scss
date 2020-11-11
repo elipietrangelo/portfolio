@@ -1,0 +1,26 @@
+HTML {
+	scroll-behavior: smooth;
+}
+
+HTML,
+BODY {
+	min-height: 100%;
+}
+
+BODY {
+	padding-bottom: 5em;
+	@include media-breakpoint-up(sm) {
+		padding-bottom: 0;
+	}
+}
+
+A {
+	
+	text-decoration: none;
+	color: $dark;
+	&:hover {
+		text-decoration: none;
+		color: $dark;
+	}
+	
+}

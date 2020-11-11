@@ -1,0 +1,33 @@
+{% macro videoCard(href,title,description,readmore,addClasses) %}
+	<article class="ef-videoCard {{ addClasses }}">
+        <div class="ef-videoCard__video" data-id="{{ href }}">
+            <div class="embed-responsive embed-responsive-1by1">
+                <div class="embed-responsive-item centered-bgi ef-videoCard__embeddedItem"
+                     style="background-image:url(https://img.youtube.com/vi/{{ href }}/maxresdefault.jpg);"></div>
+            </div>
+            <span class="ef-videoCard__play contained-bgi"></span>
+        </div>
+        <div class="ef-videoCard__content position-relative">
+            <h3 class="ef-videoCard__title h3 action-font">
+                {% if description %}
+                    <a href="{{ readmore }}" class="ef-videoCard__titleInner stretched-link">
+                        {{ title }}
+                    </a>
+                {% else %}
+                    <span class="ef-videoCard__titleInner">
+                        {{ title }}
+                    </span>
+                {% endif %}
+
+            </h3>
+            {% if description %}
+                <p class="ef-videoCard__description">
+                    {{ description | truncate(128) }}
+                </p>
+                <div class="d-flex mt-3">
+                    <span class="ef-videoCard__more text-uppercase action-font">Read more</span>
+                </div>
+            {% endif %}
+        </div>
+    </article>
+{% endmacro %}

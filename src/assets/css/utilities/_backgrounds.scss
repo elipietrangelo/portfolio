@@ -1,0 +1,19 @@
+.centered-bgi {
+	@include centered-bgi();
+}
+
+.contained-bgi {
+	@include contained-bgi();
+}
+
+.hero-gradient {
+	@include linear-gradient-to-deg(180deg,$hero-bg,0%,#fff,20%);
+}
+
+.hero-bg {
+	background-color: $hero-bg;
+}
+
+.underlineBlue {
+	@include textUnderlineGradient($lightblue, 0 0.8em, 100% 40%);
+}

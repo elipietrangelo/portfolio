@@ -1,0 +1,38 @@
+@mixin centered-bgi() {
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+
+@mixin contained-bgi() {
+	background-size: contain;
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+
+@mixin linear-gradient-to-deg($deg,$color1,$color-stop-1, $color2, $color-stop-2) {
+	background: $color1;
+	background-image: linear-gradient($deg, $color1 $color-stop-1, $color2 $color-stop-2);
+}
+
+@mixin linear-gradient-to-top($color1,$color-stop-1, $color2, $color-stop-2) {
+	background: $color1;
+	background-image: linear-gradient(180deg, $color1 $color-stop-1, $color2 $color-stop-2);
+}
+
+@mixin linear-gradient-to-top-3($color1,$color-stop-1, $color2, $color-stop-2, $color3, $color-stop-3) {
+	background: $color1;
+	background-image: linear-gradient(180deg, $color1 $color-stop-1, $color2 $color-stop-2, $color3 $color-stop-3);
+}
+
+@mixin linear-gradient-to-right-90($color1,$color-stop-1, $color2, $color-stop-2) {
+	background: $color1;
+	background-image: linear-gradient(90deg, $color1 $color-stop-1, $color2 $color-stop-2);
+}
+
+@mixin textUnderlineGradient($color,$bgPos,$bgSizePos) {
+	background-image: linear-gradient($color,$color);
+	background-position: $bgPos;
+	background-repeat: no-repeat;
+	background-size: $bgSizePos;
+}

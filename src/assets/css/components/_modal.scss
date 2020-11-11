@@ -1,0 +1,202 @@
+.#{$namespace}modal {
+	
+	/* Save root element context for easy access if nesting is needed */
+	
+	$self: &;
+	
+	
+	/* variables specific to current element */
+	
+	$element-specific-variables: "";
+	
+	
+	/* properties of current element  + media queries */
+	
+	position: fixed;
+	z-index: z("modal-backdrop");
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-color: rgba(#fff,0.95);
+	opacity: 0;
+	overflow-y: auto;
+	overflow-x: hidden;
+	transform: scale(0);
+	
+	transition: opacity 0.25s ease-out;
+	
+	
+	/* Pseudo Elements */
+	
+	&::before {
+		
+		content:"";
+		background-color: $hero-bg;
+		position: absolute;
+		z-index: z("negative");
+		top: 1em;
+		left: 1em;
+		right: 50%;
+		bottom: 1em;
+		transition: transform 0.25s linear;
+		transform: translateX(-120%);
+		
+		@include media-breakpoint-up(sm) {
+			
+			transform: translateX(120%);
+			left: 50%;
+			right: 1em;
+		}
+		
+		@include media-breakpoint-up(md) {
+			
+			right: 2em;
+			top: 2em;
+			bottom: 2em
+		}
+		
+	}
+	
+	&::after {
+	}
+	
+	/*
+	Include elements that are linked to the current element but have to reside at the root level of the stylesheet
+	(e.g: keyframes)
+	*/
+	@at-root {
+	}
+	
+	
+	/* children - write selector in full in comments in order to facilitate search */
+	
+	//modal__embed
+	&__embed {
+		
+		opacity: 0;
+		transform: translateX(-75%);
+		position: relative;
+		z-index: z("low");
+		transition: opacity 0.5s 0.25s ease-out,transform 0.25s 0.25s ease-out;
+	}
+	
+	// modal__childElement
+	&__close {
+		
+		// follows same logic as parent
+		
+		position: absolute;
+		padding: 0;
+		z-index: z("menu-trigger");
+		width: 4em;
+		height: 4em;
+		border-radius: 50%;
+		bottom: 1em;
+		right: 1em;
+		
+		background-color: #fff;
+		transition: all 0.2s ease-out;
+		
+		@include media-breakpoint-up(sm) {
+			
+			bottom: auto;
+			right: auto;
+			top: 1em;
+			left: 1em;
+			
+		}
+		
+		@include media-breakpoint-up(md) {
+			
+			top: 2em;
+			left: 2em;
+			width: 5em;
+			height: 5em;
+			
+		}
+		
+		@include media-breakpoint-up(lg) {
+			
+			width: 6em;
+			height: 6em;
+			
+		}
+		
+		&::before,
+		&::after {
+			
+			content: "";
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%,-50%);
+			height: 50%;
+			width: 0.2em;
+			background-color: $crimson;
+			
+		}
+		
+		&::before {
+			transform: translate(-50%,-50%) rotate(45deg);
+		}
+		&::after {
+			transform: translate(-50%,-50%) rotate(-45deg);
+		}
+		
+	}
+	
+	
+	/* modifiers */
+	
+	// modal -altStyle
+	&.-active {
+		
+		// follows same logic as base element
+		
+		opacity: 1;
+		transform: scale(1);
+		
+	}
+	
+	&.-transitioned {
+		&::before {
+			transform: translateX(0);
+		}
+		
+		#{$self}__embed {
+			
+			opacity: 1;
+			transform: translateX(0);
+			
+		}
+		
+	}
+	
+	
+	/* Pseudo Classes */
+	
+	&:hover {
+		@media (hover: hover) {
+			
+		}
+	}
+	
+	&:focus {
+	}
+	
+	&:active {
+	}
+	
+	&:focus,
+	&:active {
+	}
+	
+	/* random parent element */
+	/* 
+	*
+	*   Syntax : .randomParentElt & {}
+	*
+	*/
+	
+}

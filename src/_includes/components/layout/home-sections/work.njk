@@ -1,0 +1,22 @@
+<div class="container-lg">
+    <h2 class="ef-section__title h2">
+            <span class="ef-section__titleInner position-relative">
+                {{ workHeading }}
+            </span>
+    </h2>
+    <div class="ef-work__videoContainer row flex-column align-items-center">
+        {% import "components/video-card.njk" as macro %}
+        {% for video in collections.videos | limit(3) %}
+            <div class="col-12 col-sm-10 mb-5 mb-md-10">
+                {% if loop.index === 2 %}
+                    {{ macro.videoCard(video.data.href,video.data.title,video.data.description,video.url,"-hasShapeInverted") }}
+                {% else %}
+                    {{ macro.videoCard(video.data.href,video.data.title,video.data.description,video.url,"") }}
+                {% endif %}
+            </div>
+        {% endfor %}
+        <div class="col-sm-5 align-self-end">
+            <a href="projects/" class="ef-work__seeMore action-font mx-auto">{{ seeMoreBtnText }}</a>
+        </div>
+    </div>
+</div>

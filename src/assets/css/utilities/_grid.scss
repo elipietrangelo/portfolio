@@ -1,0 +1,17 @@
+[class^="col-"] .container {
+	padding: 0;
+}
+.row[class*="stretch"] {
+	> [class^="col-"] > [class^="#{$namespace}"] {
+		min-height: 100%;
+	}
+}
+
+@each $max-width, $max-width-value in $container-max-widths {
+	.container-#{$max-width}-half {
+		padding: 0 $grid-gutter-width/2;
+		@include media-breakpoint-up(#{$max-width}) {
+			width: (#{$max-width-value / 2 - ($grid-gutter-width)});
+		}
+	}
+}

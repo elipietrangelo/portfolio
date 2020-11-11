@@ -1,0 +1,32 @@
+.text-small {
+	font-size: $font-size-sm;
+}
+
+.text-big {
+	font-size: 1.15rem;
+}
+
+.max-ch-paragraph {
+	max-width: 60ch;
+	&.-big {
+		max-width: 80ch;
+	}
+}
+
+.unstyled-list {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+.action-font {
+	
+	font-family: $action-font;
+
+}
+
+.title-font {
+	
+	font-family: $title-font;
+	
+}

@@ -1,0 +1,124 @@
+.#{$namespace}contact {
+	
+	/* Save root element context for easy access if nesting is needed */
+	
+	$self: &;
+	
+	
+	/* variables specific to current element */
+	
+	$element-specific-variables: "";
+	
+	
+	/* properties of current element  + media queries */
+	
+	
+	/* Pseudo Elements */
+	
+	&::before {
+	}
+	
+	&::after {
+	}
+	
+	/*
+	Include elements that are linked to the current element but have to reside at the root level of the stylesheet
+	(e.g: keyframes)
+	*/
+	@at-root {
+	}
+	
+	
+	/* children - write selector in full in comments in order to facilitate search */
+	
+	//contact__title
+	&__title#{$self}__title {
+		//margin: 0 !important;
+		position: relative;
+		top: 0.5em;
+		margin: 0;
+		@include media-breakpoint-up(md) {
+			position: absolute;
+			white-space: nowrap;
+			transform-origin: bottom left;
+			transform: rotate(-90deg) translateY(0);
+			top: auto;
+			left: -0.5em;
+			bottom: -0.5em;
+			background-color: transparent;
+		}
+	}
+	
+	// contact__bg
+	&__bg {
+		
+		// follows same logic as parent
+		position: relative;
+		height: 8em;
+		display: flex;
+		align-items: flex-end;
+		justify-content: flex-start;
+		@include media-breakpoint-up(sm) {
+			height: 12em;
+		}
+		@include media-breakpoint-up(md) {
+			height: 14em;
+		}
+		&::before {
+			
+			content: "";
+			background-color: $lightblue;
+			position: absolute;
+			z-index: z("neganegative");
+			top: -8em;
+			right: 0;
+			bottom: 0;
+			left: -3em;
+			
+		}
+	}
+	
+	//contact__socialItem
+	&__socialItem {
+		
+		width: 4em;
+	
+	}
+	
+	
+	/* modifiers */
+	
+	// contact -altStyle
+	&.-altStyle {
+		
+		// follows same logic as base element
+		
+	}
+	
+	
+	/* Pseudo Classes */
+	
+	&:hover {
+		@media (hover: hover) {
+			
+		}
+	}
+	
+	&:focus {
+	}
+	
+	&:active {
+	}
+	
+	&:focus,
+	&:active {
+	}
+	
+	/* random parent element */
+	/* 
+	*
+	*   Syntax : .randomParentElt & {}
+	*
+	*/
+	
+}

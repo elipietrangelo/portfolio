@@ -1,0 +1,99 @@
+.#{$namespace}work {
+	
+	/* Save root element context for easy access if nesting is needed */
+	
+	$self: &;
+	
+	
+	/* variables specific to current element */
+	
+	$element-specific-variables: "";
+	
+	
+	/* properties of current element  + media queries */
+	
+	position: relative;
+	
+	/* Pseudo Elements */
+	
+	&::before {
+	
+	}
+	
+	&::after {
+	}
+	
+	/*
+	Include elements that are linked to the current element but have to reside at the root level of the stylesheet
+	(e.g: keyframes)
+	*/
+	@at-root {
+	}
+	
+	
+	/* children - write selector in full in comments in order to facilitate search */
+	
+	//work__seMore
+	&__seeMore {
+		
+		width: 6.5em;
+		height: 6.5em;
+		border-radius: 50%;
+		border: 0.25rem solid;
+		color: $crimson;
+		font-size: $font-size-xl;
+		text-transform: uppercase;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		transition: all 0.15s ease-in;
+		
+		@media (hover: hover) {
+			&:hover {
+				
+				border-color: $crimson;
+				background-color: $crimson;
+				color: #fff;
+				
+			}
+		}
+		
+	}
+	
+	
+	/* modifiers */
+	
+	// work -altStyle
+	&.-altStyle {
+		
+		// follows same logic as base element
+		
+	}
+	
+	
+	/* Pseudo Classes */
+	
+	&:hover {
+		@media (hover: hover) {
+			
+		}
+	}
+	
+	&:focus {
+	}
+	
+	&:active {
+	}
+	
+	&:focus,
+	&:active {
+	}
+	
+	/* random parent element */
+	/* 
+	*
+	*   Syntax : .randomParentElt & {}
+	*
+	*/
+	
+}

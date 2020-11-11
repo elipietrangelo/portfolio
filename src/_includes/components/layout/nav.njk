@@ -1,0 +1,29 @@
+<button class="ef-navTrigger border-0">
+    <span class="action-font text-uppercase">Menu</span>
+    <span class="ef-navTrigger__close" aria-hidden="true"></span>
+</button>
+
+{% set navPages = collections.all | eleventyNavigation %}
+{% macro renderNavListItem(entry) -%}
+    {% if entry.hash === "" and entry.url == page.url %}
+        {% else %}
+            <li class="ef-nav__item{% if entry.children.length %} -hasChildren{% endif %}{% if entry.hash %}{% else %}{% if entry.url == page.url %} -active{% endif %}{% endif %}">
+                <a class="ef-nav__link" href="{% if entry.url %}{{ entry.url | url }}{% endif %}{% if entry.hash %}{{ '#' + entry.hash }}{% else %}{% endif %}">
+                    <span class="ef-nav__linkText">{{ entry.heading }}</span>
+                </a>
+                {%- if entry.children.length -%}
+                    <ul class="ef-nav__menu ef-nav__subMenu unstyled-list">
+                        {%- for child in entry.children %}{{ renderNavListItem(child) }}{% endfor -%}
+                    </ul>
+                {%- endif -%}
+            </li>
+    {% endif %}
+{%- endmacro %}
+
+
+
+<nav class="ef-nav">
+    <ul class="ef-nav__menu unstyled-list d-flex flex-column justify-content-center m-0 h-100">
+        {%- for entry in navPages %}{{ renderNavListItem(entry) }}{%- endfor -%}
+    </ul>
+</nav>

@@ -1,0 +1,92 @@
+.#{$namespace}chip {
+	
+	/* Save root element context for easy access if nesting is needed */
+	
+	$self: &;
+	
+	
+	/* variables specific to current element */
+	
+	$element-specific-variables: "";
+	
+	
+	/* properties of current element  + media queries */
+	
+	font-size: $font-size-sm;
+	border-radius: 30px;
+	color: $crimson;
+	border: 0.2em solid;
+	transition:
+				border-color 0.15s ease-out,
+				color 0.15s ease-out,
+				background-color 0.15s ease-out;
+	margin-right: 0.5em;
+	
+	/* Pseudo Elements */
+	
+	&::before {
+	}
+	
+	&::after {
+	}
+	
+	/*
+	Include elements that are linked to the current element but have to reside at the root level of the stylesheet
+	(e.g: keyframes)
+	*/
+	@at-root {
+	}
+	
+	
+	/* children - write selector in full in comments in order to facilitate search */
+	
+	// chip__childElement
+	&__childElement {
+		
+		// follows same logic as parent
+		
+	}
+	
+	
+	/* modifiers */
+	
+	// chip -altStyle
+	&.-active {
+		
+		// follows same logic as base element
+		
+		border-color: $crimson;
+		background-color: $crimson;
+		color: #fff;
+		
+	}
+	
+	
+	/* Pseudo Classes */
+	
+	&:hover {
+		@media (hover: hover) {
+			border-color: $crimson;
+			background-color: $crimson;
+			color: #fff;
+		}
+	}
+	
+	&:focus {
+	}
+	
+	&:active {
+	}
+	
+	&:focus,
+	&:active {
+	}
+	
+	/* random parent element */
+	/* 
+	*
+	*   Syntax : .randomParentElt & {}
+	*
+	*/
+	
+}

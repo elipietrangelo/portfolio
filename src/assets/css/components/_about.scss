@@ -1,0 +1,112 @@
+.#{$namespace}about {
+	
+	/* Save root element context for easy access if nesting is needed */
+	
+	$self: &;
+	
+	
+	/* variables specific to current element */
+	
+	$element-specific-variables: "";
+	
+	
+	/* properties of current element  + media queries */
+	
+	
+	/* Pseudo Elements */
+	
+	&::before {
+	}
+	
+	&::after {
+	}
+	
+	/*
+	Include elements that are linked to the current element but have to reside at the root level of the stylesheet
+	(e.g: keyframes)
+	*/
+	@at-root {
+	}
+	
+	
+	/* children - write selector in full in comments in order to facilitate search */
+	
+	&__bg {
+		
+		position: relative;
+		
+		&::before {
+			
+			content: "";
+			background-color: $hero-bg;
+			position: absolute;
+			z-index: z("neganegative");
+			top: 4em;
+			right: 2em;
+			bottom: 4em;
+			left: 2em;
+			
+		}
+		
+	}
+	
+	// about__text
+	&__text {
+		
+		// follows same logic as parent
+		max-width: 60ch;
+		font-family: 'Open Sans', sans-serif;
+		font-size: $font-size-lg;
+		line-height: $line-height-lg;
+		background-color: #fff;
+		padding: 0 1em 1em;
+		position: relative;
+		margin: 0;
+		
+		@include media-breakpoint-up(sm) {
+			padding: 0 1.5em 1.5em;
+		}
+		
+		@include media-breakpoint-up(md) {
+			padding: 0 2em 2em;
+		}
+		
+	}
+	
+	
+	/* modifiers */
+	
+	// about -altStyle
+	&.-altStyle {
+		
+		// follows same logic as base element
+		
+	}
+	
+	
+	/* Pseudo Classes */
+	
+	&:hover {
+		@media (hover: hover) {
+			
+		}
+	}
+	
+	&:focus {
+	}
+	
+	&:active {
+	}
+	
+	&:focus,
+	&:active {
+	}
+	
+	/* random parent element */
+	/* 
+	*
+	*   Syntax : .randomParentElt & {}
+	*
+	*/
+	
+}

@@ -1,0 +1,16 @@
+{
+  "items": {
+    "twitter": {
+      "link": "www.twitter.com",
+      "icon": "/media/social/002-twitter.svg"
+    },
+    "youtube": {
+      "link": "www.twitter.com",
+      "icon": "/media/social/youtube-icon.svg"
+    },
+    "email": {
+      "link": "www.instagram.com",
+      "icon": "/media/social/005-email.svg"
+    }
+  }
+}

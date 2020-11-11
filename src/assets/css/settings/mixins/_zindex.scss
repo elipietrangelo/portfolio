@@ -1,0 +1,23 @@
+$z-layers: (
+		"neganegative": -20,
+		"negative": -10,
+		"zero": 0,
+		"low": 100,
+		"medium": 200,
+		"high": 300,
+		"dropdown": $zindex-dropdown,
+		"fixed": $zindex-fixed,
+		"menu-trigger": 1035,
+		"modal-backdrop": $zindex-modal-backdrop,
+		"modal": $zindex-modal,
+		"popover": $zindex-popover,
+		"tooltip": $zindex-tooltip
+);
+
+@function z($layer) {
+	@if not map-has-key($z-layers, $layer) {
+		@warn "No layer found for `#{$layer}` in $z-layers map. Property omitted.";
+	}
+	
+	@return map-get($z-layers, $layer);
+}

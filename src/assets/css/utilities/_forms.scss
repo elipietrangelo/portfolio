@@ -1,0 +1,13 @@
+.form-group-inline {
+	
+	display: flex;
+	flex-flow: row nowrap;
+	
+	> *  + * {
+		
+		flex-grow: 1;
+		margin-left: $spacer;
+		
+	}
+	
+}

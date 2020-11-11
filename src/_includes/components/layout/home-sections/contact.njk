@@ -1,0 +1,21 @@
+<div class="container-lg">
+    <div class="row">
+        <div class="col-12 col-md-6 offset-md-6">
+            <div class="ef-contact__bg">
+                <h2 class="ef-section__title ef-contact__title h2 mt-5">
+                    {{ contactHeading }}
+                </h2>
+            </div>
+            <div class="ef-contact__social pt-5">
+                <p class="text-big mb-5">{{ contactText }}</p>
+                <div class="d-flex justify-content-around flex-wrap">
+                    {% for socialIndex, socialItem in globalSocial.items %}
+                        <a href="{{ socialItem.link }}" class="ef-contact__socialItem mb-3">
+                            <img src="{{ socialItem.icon }}" class="img-fluid" alt="">
+                        </a>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

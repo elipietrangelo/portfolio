@@ -1,0 +1,90 @@
+.#{$namespace}section {
+	
+	/* Save root element context for easy access if nesting is needed */
+	
+	$self: &;
+	
+	
+	/* variables specific to current element */
+	
+	$element-specific-variables: "";
+	
+	
+	/* properties of current element  + media queries */
+	
+	
+	/* Pseudo Elements */
+	
+	&::before {
+	}
+	
+	&::after {
+	}
+	
+	/*
+	Include elements that are linked to the current element but have to reside at the root level of the stylesheet
+	(e.g: keyframes)
+	*/
+	@at-root {
+	}
+	
+	
+	/* children - write selector in full in comments in order to facilitate search */
+	
+	// section__title
+	&__title {
+		
+		// follows same logic as parent
+		margin-bottom: map_get($spacers, 3);
+		text-align: center;
+		font-family: $title-font;
+		
+		@include media-breakpoint-up(lg) {
+			margin-bottom: map_get($spacers, 5);
+		}
+	}
+	
+	&__titleInner {
+		@include textUnderlineGradient($hero-bg, 0 0.65em, 100% 50%);
+		
+		&.-underlineBlue {
+			@include textUnderlineGradient($lightblue, 0 0.65em, 100% 50%);
+		}
+	}
+	
+	/* modifiers */
+	
+	// section -altStyle
+	&.-altStyle {
+		
+		// follows same logic as base element
+		
+	}
+	
+	
+	/* Pseudo Classes */
+	
+	&:hover {
+		@media (hover: hover) {
+			
+		}
+	}
+	
+	&:focus {
+	}
+	
+	&:active {
+	}
+	
+	&:focus,
+	&:active {
+	}
+	
+	/* random parent element */
+	/* 
+	*
+	*   Syntax : .randomParentElt & {}
+	*
+	*/
+	
+}
