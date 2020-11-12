@@ -1,8 +1,8 @@
 ---
 layout: base-login
 ---
-{% set workNavElt = collections.all | eleventyNavigation %}
-{% for elt in workNavElt %}
+{% set anchorNav = collections.all | eleventyNavigation %}
+{% for elt in anchorNav %}
     {% if elt.key === "hero" %}
     {% else %}
         <section class="ef-section ef-{{ elt.key }}{% if elt.key === "about" or elt.key === "contact" %}{% else %} mb-10 mb-md-13{% endif %}" id="{{ elt.key }}">
