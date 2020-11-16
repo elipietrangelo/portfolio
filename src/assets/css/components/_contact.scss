@@ -16,6 +16,9 @@
 	/* Pseudo Elements */
 	
 	&::before {
+		
+	
+		
 	}
 	
 	&::after {
@@ -30,6 +33,12 @@
 	
 	
 	/* children - write selector in full in comments in order to facilitate search */
+	
+	
+	&__container {
+		position: relative;
+		
+	}
 	
 	//contact__title
 	&__title#{$self}__title {
@@ -47,6 +56,8 @@
 			bottom: -0.5em;
 			background-color: transparent;
 		}
+		
+		
 	}
 	
 	// contact__bg
@@ -76,12 +87,48 @@
 			left: -3em;
 			
 		}
+		
+		&::after {
+			
+			content: attr(data-title);
+			font-size: 16.5vw;
+			position: absolute;
+			z-index: z("deepdivenegative");
+			width: 100%;
+			text-align: center;
+			font-family: $title-font;
+			opacity: 0.035;
+			white-space: nowrap;
+			transform-origin: bottom left;
+			transform: rotate(-90deg) translateY(0);
+			top: auto;
+			left: -1em;
+			bottom: -0.5em;
+		}
 	}
 	
 	//contact__socialItem
 	&__socialItem {
 		
-		width: 4em;
+		width: 8em;
+		height: 8em;
+		background-color: $crimson;
+		border-radius: 50%;
+		
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		
+		svg {
+			
+			width: 50%;
+			height: 50%;
+			
+			* {
+				fill: #fff;
+			}
+			
+		}
 	
 	}
 	

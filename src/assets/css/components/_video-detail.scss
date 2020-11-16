@@ -79,11 +79,6 @@
 		max-width: 60ch;
 		background-color: #fff;
 		
-		&::first-line {
-			
-			@include textUnderlineGradient($lightblue, 0 0.85em, 100% 40%);
-		}
-		
 		@include media-breakpoint-up(sm) {
 			max-width: 50ch;
 		}

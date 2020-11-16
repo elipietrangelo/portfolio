@@ -16,7 +16,7 @@ module.exports = function(eleventyConfig) {
 
     //needed not to type out path to layout when used
     eleventyConfig.addLayoutAlias('base', path.join(config.layoutsFolder,'/base.njk'));
-    eleventyConfig.addLayoutAlias('base-login', path.join(config.layoutsFolder,'/base-login.njk'));
+    eleventyConfig.addLayoutAlias('baseLogin', path.join(config.layoutsFolder,'/baseLogin.njk'));
     eleventyConfig.addLayoutAlias('home', path.join(config.layoutsFolder,'/home.njk'));
     eleventyConfig.addLayoutAlias('mywork', path.join(config.layoutsFolder,'/my-work.njk'));
     eleventyConfig.addLayoutAlias('detail', path.join(config.layoutsFolder,'/detail.njk'));
@@ -29,10 +29,10 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addCollection("homeSections", function(collectionApi) {
         // get unsorted items
         let hashSet = new Set();
-        collectionApi.getFilteredByGlob("./src/pages/home/sections**/*.md").forEach(function(item) {
+        collectionApi.getFilteredByGlob("./src/pages/home/sections/**/*.md").forEach(function(item) {
             if( "hash" in item.data.eleventyNavigation ) {
-                    let hash = item.data.eleventyNavigation.hash;
-                    hashSet.add(hash);
+                let hash = item.data.eleventyNavigation.hash;
+                hashSet.add(hash);
             }
         });
 

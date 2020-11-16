@@ -6,7 +6,7 @@ layout: base
         <div class="ef-workHeader position-relative">
             <h1 class="h1 my-0 ml-2">
                 <span class="title-font underlineBlue">
-                    My work
+                    {{ pageHeading }}
                 </span>
             </h1>
         </div>
@@ -21,14 +21,14 @@ layout: base
             {% endfor %}
         </div>
     </div>
-    <div class="row align-items-stretch">
+    <div class="row align-items-stretch ef-videoGallery position-relative" data-title="My work">
         {% import "components/video-item.njk" as macro %}
         {% if tag %}
             {% set vidCollection = collections[tag] %}
             {% else %}
             {% set vidCollection = collections.videos %}
         {% endif %}
-        {% for video in vidCollection %}
+        {% for video in vidCollection | reverse %}
             <div class="col-12 col-sm-6 col-lg-4 mb-5">
                 {% if video.data.description %}
                     {{ macro.videoItem(video.data.href,video.data.title,video.data.description,video.url,"") }}

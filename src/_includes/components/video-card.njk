@@ -1,5 +1,5 @@
 {% macro videoCard(href,title,description,readmore,addClasses) %}
-	<article class="ef-videoCard {{ addClasses }}">
+	<article class="ef-videoCard {{ addClasses }}" data-title="{{ title }}">
         <div class="ef-videoCard__video" data-id="{{ href }}">
             <div class="embed-responsive embed-responsive-1by1">
                 <div class="embed-responsive-item centered-bgi ef-videoCard__embeddedItem"

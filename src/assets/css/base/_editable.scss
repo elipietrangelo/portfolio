@@ -1,4 +1,4 @@
-.#{$namespace}about {
+.#{$namespace}editable {
 	
 	/* Save root element context for easy access if nesting is needed */
 	
@@ -31,44 +31,31 @@
 	
 	/* children - write selector in full in comments in order to facilitate search */
 	
-	&__bg {
+	A {
 		
-		position: relative;
+		@include textUnderlineGradient($crimson,0 bottom,100% 30%);
+		transition: color 0.25s linear, background-size 0.25s ease-out;
 		
-		&::before {
+		@media (hover: hover) {
 			
-			content: "";
-			background-color: $hero-bg;
-			position: absolute;
-			z-index: z("neganegative");
-			top: 4em;
-			right: 2em;
-			bottom: 4em;
-			left: 2em;
+			&:hover {
+				
+				color: $dark;
+				background-size: 100% 100%;
+				
+			}
 			
 		}
 		
 	}
 	
-	// about__text
-	&__text {
-		
-		// follows same logic as parent
-		max-width: 60ch;
-		font-family: 'Open Sans', sans-serif;
-		font-size: $font-size-lg;
-		line-height: $line-height-lg;
-		background-color: #fff;
-		padding: 1em;
-		position: relative;
+	P {
 		margin: 0;
 		
-		@include media-breakpoint-up(sm) {
-			padding: 1.5em;
-		}
-		
-		@include media-breakpoint-up(md) {
-			padding: 2em;
+		+ P {
+			
+			margin-top: 1em;
+			
 		}
 		
 	}
@@ -76,7 +63,7 @@
 	
 	/* modifiers */
 	
-	// about -altStyle
+	// editable -altStyle
 	&.-altStyle {
 		
 		// follows same logic as base element

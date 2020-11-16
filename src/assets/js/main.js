@@ -37,7 +37,7 @@ function openModal(videoTrigger) {
     modal.classList.add("-active");
     modal.querySelector("IFRAME").setAttribute("src", "https://www.youtube.com/embed/" + videoTrigger.dataset.id);
     modal.addEventListener('transitionend', () => {
-       modal.classList.add("-transitioned")
+        modal.classList.add("-transitioned")
     });
 }
 
@@ -46,9 +46,9 @@ function closeModal() {
         document.querySelector("BODY").classList.remove("overflow-hidden");
         modal.classList.remove('-active', '-transitioned');
         modal.querySelector("IFRAME").setAttribute("src", "");
-       modal.addEventListener('transitionend', () => {
-          modal.classList.remove("-transitioned")
-       });
+        modal.addEventListener('transitionend', () => {
+            modal.classList.remove("-transitioned")
+        });
     }
 }
 

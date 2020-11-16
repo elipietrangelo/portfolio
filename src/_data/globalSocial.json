@@ -1,16 +1,5 @@
 {
-  "items": {
-    "twitter": {
-      "link": "www.twitter.com",
-      "icon": "/media/social/002-twitter.svg"
-    },
-    "youtube": {
-      "link": "www.twitter.com",
-      "icon": "/media/social/youtube-icon.svg"
-    },
-    "email": {
-      "link": "www.instagram.com",
-      "icon": "/media/social/005-email.svg"
-    }
-  }
+  "email": "elisapietrangelo@gmail.com",
+  "youtube": "https://www.youtube.com/channel/UCiLVUQd5NU8EbmjrDgtU92Q",
+  "twitter": "https://www.twitter.com"
 }

@@ -1,12 +1,10 @@
-<div class="container-lg">
+<div class="container-lg ef-work__container">
     <h2 class="ef-section__title h2">
-            <span class="ef-section__titleInner position-relative">
-                {{ workHeading }}
-            </span>
+        {{ workHeading }}
     </h2>
     <div class="ef-work__videoContainer row flex-column align-items-center">
         {% import "components/video-card.njk" as macro %}
-        {% for video in collections.videos | limit(3) %}
+        {% for video in collections.videos | reverse | limit(3) %}
             <div class="col-12 col-sm-10 mb-5 mb-md-10">
                 {% if loop.index === 2 %}
                     {{ macro.videoCard(video.data.href,video.data.title,video.data.description,video.url,"-hasShapeInverted") }}

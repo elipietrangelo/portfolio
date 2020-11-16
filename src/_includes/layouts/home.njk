@@ -1,11 +1,11 @@
 ---
-layout: base-login
+layout: baseLogin
 ---
 {% set anchorNav = collections.all | eleventyNavigation %}
 {% for elt in anchorNav %}
     {% if elt.key === "hero" %}
     {% else %}
-        <section class="ef-section ef-{{ elt.key }}{% if elt.key === "about" or elt.key === "contact" %}{% else %} mb-10 mb-md-13{% endif %}" id="{{ elt.key }}">
+        <section data-title="{{ elt.key }}" class="ef-section ef-{{ elt.key }}{% if elt.key === "about" or elt.key === "contact" %}{% else %} mb-10 mb-md-13{% endif %} position-relative" id="{{ elt.key }}">
             {% include "components/layout/home-sections/"+elt.key+".njk" %}
         </section>
     {% endif %}

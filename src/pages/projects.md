@@ -2,10 +2,10 @@
 layout: mywork
 title: My work
 permalink: projects/
-heading: "Elisa Pietrangelo"
+pageHeading: My work
 subheading: Filmmaker
 eleventyNavigation:
-    heading: All work
-    key: projects
-    parent: work
+  heading: All work
+  key: projects
+  parent: work
 ---

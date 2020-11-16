@@ -8,7 +8,9 @@
     "del11ty": "gulp deleteDist",
     "build11y": "eleventy & gulp styles",
     "start11ty": "gulp serve & eleventy --serve",
-    "postinstall": "link-module-alias"
+    "local11ycms": "npx netlify-cms-proxy-server",
+    "postinstall": "link-module-alias",
+    "prebuild": "chmod +x ./prebuild.sh && ./prebuild.sh"
   },
   "_moduleAliases": {
     "config": "./config.js"
@@ -32,6 +34,7 @@
     "gulp-size": "^3.0.0",
     "link-module-alias": "^1.2.0",
     "markdown-it": "^11.0.0",
+    "netlify-cms-proxy-server": "^1.3.6",
     "path": "^0.12.7",
     "slugify": "^1.4.5"
   }
