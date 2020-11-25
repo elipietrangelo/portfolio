@@ -1,7 +1,7 @@
 <div class="container-lg">
     <div class="row">
         <div class="col-12 col-md-6 offset-md-6">
-            <div class="ef-contact__bg"  data-title="{{ contactHeading }}">
+            <div class="ef-contact__bg" data-title="{{ contactHeading }}">
                 <h2 class="ef-section__title ef-contact__title h2 mt-5">
                     {{ contactHeading }}
                 </h2>
@@ -12,13 +12,17 @@
             <div class="ef-contact__social pt-5">
                 <div class="d-flex justify-content-between flex-wrap">
                     {% for socialIndex, socialItem in globalSocial %}
-                        <a href="{% if socialIndex === "email" %}mailto:{% endif %}{{ socialItem }}"
-                           class="ef-contact__socialItem mb-3
+                        {% if socialItem | length %}
+                            <a href="{% if socialIndex === "email" %}mailto:{% endif %}{{ socialItem }}"
+                               class="ef-contact__socialItem mb-3
                             {% if socialIndex === 'email' %}{% else %}mt-3{% endif %}
                             {% if socialIndex === 'twitter' %}mt-6{% endif %}
                             ">
-                            {% include "../../../../assets" + paths.mediaPath + "/social/" + socialIndex + ".svg" %}
-                        </a>
+                                {% include "../../../../assets" + paths.mediaPath + "/social/" + socialIndex + ".svg" %}
+                            </a>
+                        {% else %}
+                        {% endif %}
+
                     {% endfor %}
                 </div>
             </div>
