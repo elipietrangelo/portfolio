@@ -26,6 +26,11 @@ module.exports = function(eleventyConfig) {
         return collectionApi.getFilteredByGlob("./src/videos/**/*.md");
     });
 
+    eleventyConfig.addCollection("categories", function(collectionApi) {
+        // get unsorted items
+        return collectionApi.getFilteredByGlob("./src/categories/**/*.md");
+    });
+
     eleventyConfig.addCollection("homeSections", function(collectionApi) {
         // get unsorted items
         let hashSet = new Set();

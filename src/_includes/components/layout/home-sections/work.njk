@@ -7,9 +7,9 @@
         {% for video in collections.videos | reverse | limit(3) %}
             <div class="col-12 col-sm-10 mb-5 mb-md-10">
                 {% if loop.index === 2 %}
-                    {{ macro.videoCard(video.data.href,video.data.title,video.data.description,video.url,"-hasShapeInverted") }}
+                    {{ macro.videoCard(video.data.href,video.data.title,video.data.description,video.data.detail,video.url,"-hasShapeInverted") }}
                 {% else %}
-                    {{ macro.videoCard(video.data.href,video.data.title,video.data.description,video.url,"") }}
+                    {{ macro.videoCard(video.data.href,video.data.title,video.data.description,video.data.detail,video.url,"") }}
                 {% endif %}
             </div>
         {% endfor %}

@@ -29,27 +29,23 @@ collections:
         name: "index"
         file: "src/pages/home/home.md"
         fields:
-          - {label: "Work Section Title", name: "workHeading", widget: "string"}
           - {label: "Work Section Button Text", name: "seeMoreBtnText", widget: "string"}
-          - {label: "About Section Title", name: "aboutHeading", widget: "string"}
           - {label: "About Section Text", name: "aboutText", widget: "markdown"}
-          - {label: "Contact Section Title", name: "contactHeading", widget: "string"}
           - {label: "Contact Section Text", name: "contactText", widget: "string"}
-      - label: "My Work Page"
-        name: "projects"
-        file: "src/pages/projects.md"
-        fields:
-          - {label: "Page Title", name: "pageHeading", widget: "string"}
   - label: "Videos"
     name: "videos"
     folder: "src/videos"
+    summary: "{{title}} {{tags}}"
     create: true
     fields:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Link", name: "href", widget: "string"}
       - {label: "Text", name: "description", widget: "markdown", required: false}
-      - label: "Categories"
-        name: "tags"
-        widget: "list"
-        summary: "{{tags}}"
-        field: {label: "Tag", name: "tags", widget: "string", required: false}
+      - {label: "Tags", name: "tags", widget: "relation", collection: "categories", search_fields: ["title"], value_field: "title", display_fields: ["title"], multiple: true, required: false}
+      - {label: "Has description page", name: "detail", widget: "boolean", default: false}
+  - label: "Categories"
+    name: "categories"
+    folder: "src/categories"
+    create: true
+    fields:
+      - {label: "Name", name: "title", widget: "string"}

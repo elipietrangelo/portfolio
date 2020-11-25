@@ -6,14 +6,12 @@ layout: base
         <div class="ef-workHeader position-relative">
             <h1 class="h1 my-0 ml-2">
                 <span class="title-font underlineBlue">
-                    {{ pageHeading }}
+                   My work
                 </span>
             </h1>
         </div>
     </div>
-
     <div class="mb-5">
-
         <div class="d-flex align-items-center flex-wrap mb-n2">
             <a href="/projects/" class="ef-chip py-1{% if page.url === '/projects/' %} -active{% endif %} px-2 action-font mb-2">All ({{ collections.videos.length }})</a>
             {% for tag in collections.videoTagList %}
@@ -30,11 +28,7 @@ layout: base
         {% endif %}
         {% for video in vidCollection | reverse %}
             <div class="col-12 col-sm-6 col-lg-4 mb-5">
-                {% if video.data.description %}
-                    {{ macro.videoItem(video.data.href,video.data.title,video.data.description,video.url,"") }}
-                {% else %}
-                    {{ macro.videoItem(video.data.href,video.data.title,"","","") }}
-                {% endif %}
+                {{ macro.videoItem(video.data.href,video.data.title,video.data.description,video.data.detail,video.url,"") }}
             </div>
         {% endfor %}
     </div>

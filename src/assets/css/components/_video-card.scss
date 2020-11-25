@@ -230,6 +230,14 @@
 		
 		flex-direction: row-reverse;
 		
+		&::after {
+			
+			@include media-breakpoint-up(md) {
+				text-align: left;
+			}
+			
+		}
+		
 		#{$self}__video {
 			
 			@include media-breakpoint-up(md) {

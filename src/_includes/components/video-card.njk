@@ -1,5 +1,5 @@
-{% macro videoCard(href,title,description,readmore,addClasses) %}
-	<article class="ef-videoCard {{ addClasses }}" data-title="{{ title }}">
+{% macro videoCard(href,title,description,detail,readmore,addClasses) %}
+    <article class="ef-videoCard {{ addClasses }}" data-title="{{ title }}">
         <div class="ef-videoCard__video" data-id="{{ href }}">
             <div class="embed-responsive embed-responsive-1by1">
                 <div class="embed-responsive-item centered-bgi ef-videoCard__embeddedItem"
@@ -22,11 +22,17 @@
             </h3>
             {% if description %}
                 <p class="ef-videoCard__description">
-                    {{ description | truncate(128) }}
+                    {% if detail %}
+                        {{ description | truncate(128) }}
+                    {% else %}
+                        {{ description }}
+                    {% endif %}
                 </p>
-                <div class="d-flex mt-3">
-                    <span class="ef-videoCard__more text-uppercase action-font">Read more</span>
-                </div>
+                {% if detail %}
+                    <div class="d-flex mt-3">
+                        <span class="ef-videoCard__more text-uppercase action-font">Read more</span>
+                    </div>
+                {% endif %}
             {% endif %}
         </div>
     </article>

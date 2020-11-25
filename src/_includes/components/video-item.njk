@@ -1,4 +1,4 @@
-{% macro videoItem(href,title,description,readmore,addClasses) %}
+{% macro videoItem(href,title,description,detail,readmore,addClasses) %}
     <article class="ef-videoItem d-flex flex-column cursor-pointer position-relative">
         <div class="ef-videoItem__video px-2">
             <div class="embed-responsive embed-responsive-16by9">
@@ -11,11 +11,18 @@
         <div class="ef-videoItem__content d-flex flex-column p-2 flex-grow-1 position-relative">
             <h2 class="action-font text-big">{{ title }}</h2>
             {% if description %}
-                <p class="text-small mb-3">{{ description | truncate(128) }}</p>
+                <p class="text-small mb-3">
+                    {% if detail %}
+                        {{ description | truncate(128) }}
+                        {% else %}
+                        {{ description }}
+                    {% endif %}
+                </p>
+                {% if detail %}
                 <div class="d-flex mt-auto">
                     <a href="{{ readmore }}" class="ef-videoItem__more action-font text-uppercase text-small stretched-link">Read more</a>
                 </div>
-            {% else %}
+                {% endif %}
             {% endif %}
         </div>
     </article>
