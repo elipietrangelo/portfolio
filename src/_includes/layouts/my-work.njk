@@ -15,7 +15,7 @@ layout: base
         <div class="d-flex align-items-center flex-wrap mb-n2">
             <a href="/projects/" class="ef-chip py-1{% if page.url === '/projects/' %} -active{% endif %} px-2 action-font mb-2">All ({{ collections.videos.length }})</a>
             {% for tag in collections.videoTagList %}
-                <a href="/projects/{{ tag | slug }}/" class="ef-chip{% if page.url === ('/projects/'+tag+'/') %} -active{% endif %} py-1 px-2 action-font mb-2">{{ tag }} ({{ collections[tag].length }})</a>
+                <a href="/projects/{{ tag | slug }}/" class="ef-chip{% if page.url === ('/projects/'+(tag | slug)+'/') %} -active{% endif %} py-1 px-2 action-font mb-2">{{ tag }} ({{ collections[tag].length }})</a>
             {% endfor %}
         </div>
     </div>
