@@ -13,15 +13,11 @@ collections:
         name: "globalSocial"
         file: "src/_data/globalSocial.json"
         fields:
-          - label: "Email"
-            name: "email"
-            widget: "string"
-          - label: "Youtube"
-            name: "youtube"
-            widget: "string"
-          - label: "Twitter"
-            name: "twitter"
-            widget: "string"
+          - {label: "Email", name: "email", widget: "string", required: false}
+          - {label: "Youtube", name: "youtube",widget: "string", required: false}
+          - {label: "Twitter", name: "twitter", widget: "string", required: false}
+          - {label: "Instagram", name: "instagram", widget: "string", required: false}
+          - {label: "Facebook", name: "facebook", widget: "string", required: false}
   - name: "pages"
     label: "Pages"
     files:
