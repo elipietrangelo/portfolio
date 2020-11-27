@@ -1,6 +1,11 @@
 ---
 title: Eilenger KonschtWierk 2017
 href: UATmeLIlvpU
+description: ATP asbl begleitet Menschen mit einer psychischen Störung bei
+  ihrem psychosozialen Rehabilitationsprozess. ATP asbl bietet Zugang zu einer
+  Arbeitsstelle zu Arbeitsbedingungen, die für eine Genesung
+  förderlich sind.  Die professionellen Mitarbeiter von ATP asbl setzen sich
+  dafür ein, mögliche Arbeitsbereiche für diese Personen zu erschließen.
 tags:
   - Corporate videos
 detail: false
