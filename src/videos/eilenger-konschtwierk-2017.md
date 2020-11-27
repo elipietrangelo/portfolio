@@ -6,5 +6,5 @@ description: ATP asbl begleitet Menschen mit einer psychischen Störung bei
   Arbeitsstelle zu Arbeitsbedingungen, die für eine Genesung förderlich sind.
 tags:
   - Corporate videos
-detail: false
+detail: true
 ---
