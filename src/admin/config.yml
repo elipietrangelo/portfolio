@@ -31,9 +31,11 @@ collections:
   - label: "Videos"
     name: "videos"
     folder: "src/videos"
-    summary: "{{title}} {{tags}}"
+    summary: "{{title}} --------- {{order}}"
     create: true
     fields:
+      - {label: "Highlighted on Home Page", name: "highlighted", widget: "boolean", default: false}
+      - {label: "Order", name: "order", widget: "select",options: ["1", "2", "3"]}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Link", name: "href", widget: "string"}
       - {label: "Text", name: "description", widget: "markdown", required: false}
