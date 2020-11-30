@@ -5,7 +5,7 @@
     <div class="ef-work__videoContainer row flex-column align-items-center">
         {% import "components/video-card.njk" as macro %}
         {% for item in collections.homePage %}
-            {% for highlightedVideo in item.data.highlightedVideos %}
+            {% for highlightedVideo in item.data.highlightedVideos | limit(3) %}
                 {% set highlightLoop = loop.index %}
                 {% for video in collections.videos %}
                     {% if highlightedVideo == video.data.title %}
