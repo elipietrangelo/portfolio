@@ -1,5 +1,5 @@
 ---
-highlighted: true
+highlighted: false
 order: "2"
 title: Eilenger KonschtWierk 2017
 href: UATmeLIlvpU
