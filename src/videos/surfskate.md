@@ -1,10 +1,10 @@
 ---
-highlighted: true
-order: "200"
+highlighted: false
+order: ""
 title: Surfskate
 href: qvf7zIZwbtY
 description: Surfing the streets in the south of Luxembourg!
 tags:
-  - Surfskate
+  - Expositions CAW Walferdange
 detail: false
 ---
