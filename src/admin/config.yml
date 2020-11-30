@@ -35,7 +35,7 @@ collections:
     create: true
     fields:
       - {label: "Highlighted on Home Page", name: "highlighted", widget: "boolean", default: false}
-      - {label: "Order", name: "order", widget: "select",options: ["1", "2", "3"]}
+      - {label: "Order", name: "order", widget: "string", required: false}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Link", name: "href", widget: "string"}
       - {label: "Text", name: "description", widget: "markdown", required: false}
