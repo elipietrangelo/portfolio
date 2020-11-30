@@ -1,6 +1,6 @@
 ---
-highlighted: true
-order: "3"
+highlighted: false
+order: ""
 title: Exposition Kids CAW 2020
 href: E2MqDoMb5_I
 tags:
