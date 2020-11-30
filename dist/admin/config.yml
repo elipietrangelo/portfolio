@@ -25,7 +25,7 @@ collections:
         name: "index"
         file: "src/pages/home/home.md"
         fields:
-          - {label: "Highlighted Vdeos", name: "highlightedVideos", widget: "relation", collection: "videos", search_fields: ["title"], value_field: "title", display_fields: ["title"], multiple: true, required: false}
+          - {label: "Highlighted Vdeos", name: "highlightedVideos", widget: "relation", collection: "videos", search_fields: ["title"], value_field: "title", display_fields: ["title"], multiple: true}
           - {label: "Work Section Button Text", name: "seeMoreBtnText", widget: "string"}
           - {label: "About Section Text", name: "aboutText", widget: "markdown"}
           - {label: "Contact Section Text", name: "contactText", widget: "string"}
