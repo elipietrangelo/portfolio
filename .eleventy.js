@@ -26,10 +26,9 @@ module.exports = function(eleventyConfig) {
         return collectionApi.getFilteredByGlob("./src/videos/**/*.md");
     });
 
-    eleventyConfig.addCollection("highlightedVideos", function(collectionApi) {
+    eleventyConfig.addCollection("homePage", function(collectionApi) {
         // get unsorted items
-        const filtered = collectionApi.getFilteredByGlob("./src/videos/**/*.md").filter(item => item.data.highlighted)
-        return filtered;
+        return collectionApi.getFilteredByGlob("./src/pages/home/home.md");
     });
 
     eleventyConfig.addCollection("categories", function(collectionApi) {

@@ -6,10 +6,14 @@ heading: Elisa Pietrangelo
 subheading: Filmmaker
 aboutID: about-section
 layout: home
+highlightedVideos:
+  - "OPL & Luxtram - Bringing you closer to music. "
+  - Core
+  - Exposition Arnoldas Kubilius
 permalink: /
+contactText: Don't be shy, follow me and / or say hi!
 workHeading: My Work
 aboutHeading: About Me
-contactText: Don't be shy, follow me and / or say hi!
 title: Home
 aboutText: >-
   Hey, I’m a freelance filmmaker based in Luxembourg. After my film and

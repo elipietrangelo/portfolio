@@ -1,6 +1,4 @@
 ---
-highlighted: true
-order: "3"
 title: Exposition Arnoldas Kubilius
 href: m8qA81kmhUw
 tags:

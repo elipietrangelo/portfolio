@@ -4,16 +4,21 @@
     </h2>
     <div class="ef-work__videoContainer row flex-column align-items-center">
         {% import "components/video-card.njk" as macro %}
-        {% for video in collections.highlightedVideos | limit(3) | sortByOrder %}
-            {% if video.data.highlighted %}
-                <div class="col-12 col-sm-10 mb-5 mb-md-10">
-                    {% if loop.index === 2 %}
-                        {{ macro.videoCard(video.data.href,video.data.title,video.data.description,video.data.detail,video.url,"-hasShapeInverted") }}
-                    {% else %}
-                        {{ macro.videoCard(video.data.href,video.data.title,video.data.description,video.data.detail,video.url,"") }}
+        {% for item in collections.homePage %}
+            {% for highlightedVideo in item.data.highlightedVideos %}
+                {% set highlightLoop = loop.index %}
+                {% for video in collections.videos %}
+                    {% if highlightedVideo == video.data.title %}
+                        <div class="col-12 col-sm-10 mb-5 mb-md-10">
+                            {% if highlightLoop === 2 %}
+                                {{ macro.videoCard(video.data.href,video.data.title,video.data.description,video.data.detail,video.url,"-hasShapeInverted") }}
+                            {% else %}
+                                {{ macro.videoCard(video.data.href,video.data.title,video.data.description,video.data.detail,video.url,"") }}
+                            {% endif %}
+                        </div>
                     {% endif %}
-                </div>
-            {% endif %}
+                {% endfor %}
+            {% endfor %}
         {% endfor %}
         <div class="col-sm-5 align-self-end">
             <a href="projects/" class="ef-work__seeMore action-font mx-auto">{{ seeMoreBtnText }}</a>

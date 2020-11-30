@@ -25,17 +25,16 @@ collections:
         name: "index"
         file: "src/pages/home/home.md"
         fields:
+          - {label: "Highlighted Vdeos", name: "highlightedVideos", widget: "relation", collection: "videos", search_fields: ["title"], value_field: "title", display_fields: ["title"], multiple: true, required: false}
           - {label: "Work Section Button Text", name: "seeMoreBtnText", widget: "string"}
           - {label: "About Section Text", name: "aboutText", widget: "markdown"}
           - {label: "Contact Section Text", name: "contactText", widget: "string"}
   - label: "Videos"
     name: "videos"
     folder: "src/videos"
-    summary: "{{title}} --------- {{order}}"
+    summary: "{{title}}"
     create: true
     fields:
-      - {label: "Highlighted on Home Page", name: "highlighted", widget: "boolean", default: false}
-      - {label: "Order", name: "order", widget: "string", required: false}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Link", name: "href", widget: "string"}
       - {label: "Text", name: "description", widget: "markdown", required: false}
