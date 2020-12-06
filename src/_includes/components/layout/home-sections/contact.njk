@@ -7,25 +7,22 @@
                 </h2>
             </div>
             <p class="text-big mb-5 mt-5">{{ contactText }}</p>
-        </div>
-        <div class="col-12">
-            <div class="ef-contact__social pt-5">
-                <div class="d-flex justify-content-between flex-wrap">
-                    {% for socialIndex, socialItem in globalSocial %}
-                        {% if socialItem | length %}
-                            <a href="{% if socialIndex === "email" %}mailto:{% endif %}{{ socialItem }}"
-                               class="ef-contact__socialItem mb-3
-                            {% if socialIndex === 'email' %}{% else %}mt-3{% endif %}
-                            {% if socialIndex === 'twitter' %}mt-6{% endif %}
-                            ">
-                                {% include "../../../../assets" + paths.mediaPath + "/social/" + socialIndex + ".svg" %}
-                            </a>
-                        {% else %}
-                        {% endif %}
 
-                    {% endfor %}
-                </div>
+            <div class="ef-contact__social pt-5">
+                {% for socialIndex, socialItem in globalSocial %}
+                    {% if socialItem | length %}
+                        <a href="{% if socialIndex === "email" %}mailto:{% endif %}{{ socialItem }}"
+                           class="ef-contact__socialItem mb-3 d-block">
+                            <span class="ef-contact__socialItemText position-relative" data-attr="{{ socialIndex }}">
+                                {{ socialIndex }}
+                            </span>
+                        </a>
+                    {% else %}
+                    {% endif %}
+
+                {% endfor %}
             </div>
+
         </div>
     </div>
 </div>

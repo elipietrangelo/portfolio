@@ -110,26 +110,44 @@
 	//contact__socialItem
 	&__socialItem {
 		
-		width: 8em;
-		height: 8em;
-		background-color: $crimson;
-		border-radius: 50%;
+		font-family: $title-font;
+		font-size: $h1-font-size;
+			text-align: right;
 		
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		
-		svg {
+		&:nth-of-type(2n) {
 			
-			width: 50%;
-			height: 50%;
 			
-			* {
-				fill: #fff;
+			#{$self}__socialItemText {
+				
+				&::before {
+					
+					//left: auto;
+					//right: 0;
+					
+				}
+				
 			}
 			
 		}
+		
+	}
 	
+	&__socialItemText {
+		
+		//@include textUnderlineGradient($crimson,0 0.65em, 100% 50%);
+		
+		&::before {
+			
+			content: attr(data-attr);
+			position: absolute;
+			bottom: 50%;
+			transform: translateY(50%);
+			right: 15%;
+			font-size: 210%;
+			opacity: 0.15;
+			color: $crimson;
+			
+		}
 	}
 	
 	
