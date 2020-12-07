@@ -6,7 +6,7 @@
     # root directory if a base has not been set. This sample publishes the
     # directory located at the absolute path "root/project/build-output"
     publish = "dist/"
-    command = "npm run prebuild -- $HEAD && npm run build11y"
+    command = "npm run prebuild -- $HEAD && npm run buildprod11y"
     # Default build command.
     # Specific branch context: all deploys from this specific branch will inherit
     # these settings.
