@@ -103,7 +103,7 @@
 		padding: 0.25em 0.25em 0.25em 0;
 		
 		@include media-breakpoint-up(sm) {
-			transform: rotate(90deg) translate(50%,0%);
+			transform: rotate(90deg) translate(0);
 			right: 0;
 			left: auto;
 			transform-origin: bottom right;
