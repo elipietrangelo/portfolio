@@ -7,11 +7,11 @@
 }
 
 .hero-gradient {
-	@include linear-gradient-to-deg(180deg,$hero-bg,0%,#fff,20%);
+	@include linear-gradient-to-deg(180deg,$lightblue,0%,#fff,20%);
 }
 
 .hero-bg {
-	background-color: $hero-bg;
+	background-color: $lightblue;
 }
 
 .underlineBlue {

@@ -95,7 +95,7 @@
 	&__more {
 		
 		color: $crimson;
-		@include textUnderlineGradient($crimson,0 0.65em,0 50%);
+		@include textUnderlineGradient($crimson,0 0.9em,0 50%);
 		transition: color 0.25s linear, background-size 0.25s ease-out;
 		font-weight: 900;
 		
@@ -120,7 +120,7 @@
 		
 		#{$self}__more {
 			
-			color: $dark;
+			color: inherit;
 			background-position: 0 0;
 			background-size: 100% 100%;
 			padding: 0 0.2em;

@@ -33,14 +33,15 @@
 	
 	A {
 		
-		@include textUnderlineGradient($crimson,0 bottom,100% 30%);
-		transition: color 0.25s linear, background-size 0.25s ease-out;
+		@include textUnderlineGradient($crimson,0 bottom,100% 20%);
+		padding: 0 0.1em;
+		transition: color 0.15s linear, background-size 0.25s ease-out;
 		
 		@media (hover: hover) {
 			
 			&:hover {
 				
-				color: $dark;
+				color: #fff;
 				background-size: 100% 100%;
 				
 			}

@@ -181,12 +181,6 @@
 		transition: transform 0.25s linear;
 	}
 	
-	&__titleInner {
-		
-		//@include textUnderlineGradient(#fff, 0 0.65em, 100% 50%);
-		
-	}
-	
 	&__play {
 		
 		width: $play-dimensions;
@@ -212,7 +206,7 @@
 	&__more {
 		
 		color: $crimson;
-		@include textUnderlineGradient($crimson,0 0.65em,0 50%);
+		@include textUnderlineGradient($crimson,0 0.9em,0 50%);
 		transition: color 0.25s linear, background-size 0.25s ease-out;
 		font-weight: 900;
 		
@@ -248,16 +242,6 @@
 				}
 				
 			}
-			
-			//&:hover {
-			//	@media (hover: hover) {
-			//
-			//		&::before {
-			//			left: -1.75em;
-			//		}
-			//
-			//	}
-			//}
 			
 		}
 		

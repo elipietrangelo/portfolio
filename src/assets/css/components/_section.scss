@@ -45,7 +45,7 @@
 	}
 	
 	&__titleInner {
-		@include textUnderlineGradient($hero-bg, 0 0.65em, 100% 50%);
+		@include textUnderlineGradient($lightblue, 0 0.65em, 100% 50%);
 		
 		&.-underlineBlue {
 			@include textUnderlineGradient($lightblue, 0 0.65em, 100% 50%);

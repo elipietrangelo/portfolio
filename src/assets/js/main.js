@@ -51,12 +51,13 @@ function closeModal() {
         });
     }
 }
-
-modal.addEventListener("click", function (e) {
-    if (e.target !== modal.querySelector("IFRAME")) {
-        closeModal();
-    }
-});
+if( modal !== null) {
+    modal.addEventListener("click", function (e) {
+        if (e.target !== modal.querySelector("IFRAME")) {
+            closeModal();
+        }
+    });
+}
 
 Array.prototype.forEach.call(youtubeEmbedTrigger, function (el, i) {
     el.addEventListener("click", function () {

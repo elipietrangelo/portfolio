@@ -88,23 +88,6 @@
 			
 		}
 		
-		&::after {
-			
-			content: attr(data-title);
-			font-size: 16.5vw;
-			position: absolute;
-			z-index: z("deepdivenegative");
-			width: 100%;
-			text-align: center;
-			font-family: $title-font;
-			opacity: 0.035;
-			white-space: nowrap;
-			transform-origin: bottom left;
-			transform: rotate(-90deg) translateY(0);
-			top: auto;
-			left: -1em;
-			bottom: -0.5em;
-		}
 	}
 	
 	//contact__socialItem
@@ -140,14 +123,30 @@
 			
 			content: attr(data-attr);
 			position: absolute;
+			z-index: z("negative");
 			bottom: 50%;
 			transform: translateY(50%);
 			right: 15%;
 			font-size: 210%;
 			opacity: 0.15;
 			color: $crimson;
+			transition: opacity 0.15s linear;
+			
 			
 		}
+		
+		&:hover {
+			@media (hover: hover) {
+				
+				&::before {
+					
+					opacity: 0.35;
+					
+				}
+				
+			}
+		}
+		
 	}
 	
 	

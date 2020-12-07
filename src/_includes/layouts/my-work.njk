@@ -2,14 +2,10 @@
 layout: base
 ---
 <div class="container-md">
-    <div class="hero-bg pt-7 pt-sm-11 pt-md-13 mb-7 mt-5">
-        <div class="ef-workHeader position-relative">
-            <h1 class="h1 my-0 ml-2">
-                <span class="title-font underlineBlue">
-                   My work
-                </span>
-            </h1>
-        </div>
+    <div class="mb-5 mt-5 mb-md-7 mt-md-10 text-center">
+        <h1 class="h1 my-0 title-font d-inline-block" data-title="My work">
+           My work
+        </h1>
     </div>
     <div class="mb-5">
         <div class="d-flex align-items-center flex-wrap mb-n2">
@@ -19,7 +15,7 @@ layout: base
             {% endfor %}
         </div>
     </div>
-    <div class="row align-items-stretch ef-videoGallery position-relative" data-title="My work">
+    <div class="row align-items-stretch ef-videoGallery position-relative">
         {% import "components/video-item.njk" as macro %}
         {% if tag %}
             {% set vidCollection = collections[tag] %}

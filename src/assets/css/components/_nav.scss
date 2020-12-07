@@ -22,11 +22,11 @@
 	height: 100%;
 	opacity: 0.98;
 	font-family: $title-font;
-	@include linear-gradient-to-deg(90deg,#D8E8FA, 20%, #FFF, 100%);
+	@include linear-gradient-to-deg(90deg,$lightblue, 20%, #FFF, 100%);
 	
 	@include media-breakpoint-up(sm) {
 		padding-top: 7rem;
-		@include linear-gradient-to-deg(-60deg,#D8E8FA, 40%, #FFF, 80%);
+		@include linear-gradient-to-deg(-60deg,$lightblue, 40%, #FFF, 80%);
 	}
 	
 	@include media-breakpoint-up(md) {
@@ -165,6 +165,7 @@
 	/* modifiers */
 	
 	// nav -altStyle
+	
 	&.-active {
 		
 		// follows same logic as base element
@@ -172,7 +173,6 @@
 		display: block;
 		
 	}
-	
 	
 	/* Pseudo Classes */
 	

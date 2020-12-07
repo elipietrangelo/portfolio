@@ -22,14 +22,8 @@ $grid-gutter-width:           30px;
 //
 // Style anchor elements.
 
-//$hero-bg: #FAF1E5;
-//$crimson: #E67975;
-//$lightblue: #D8E8FA;
-
-//$hero-bg: #FFEEBD; //#F5DF9D
-$hero-bg: #FFEEBD; //#F5DF9D
-$crimson: #F590A2;
-$lightblue: #9BC7F7;
+$crimson: #ad5074;
+$lightblue: #5da8ee;//#0082cf
 
 $primary:       #FAF1E5;
 $secondary:     #3EC270;
@@ -39,7 +33,7 @@ $info:          $cyan !default;
 $warning:       $yellow !default;
 $danger:        $red !default;
 $light:         $gray-100 !default;
-$dark:          $gray-800 !default;
+$dark:          $gray-800;
 $light-gray:          #f4f4f4;
 
 $theme-colors: ();

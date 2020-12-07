@@ -32,7 +32,7 @@
 	&::before {
 		
 		content:"";
-		background-color: $hero-bg;
+		background-color: $lightblue;
 		position: absolute;
 		z-index: z("negative");
 		top: 1em;
