@@ -22,22 +22,26 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addLayoutAlias('detail', path.join(config.layoutsFolder,'/detail.njk'));
 
     eleventyConfig.addCollection("videos", function(collectionApi) {
-        // get unsorted items
         return collectionApi.getFilteredByGlob("./src/videos/**/*.md");
     });
 
+    eleventyConfig.addCollection("videoDetail", function(collectionApi) {
+        return collectionApi.getAll().filter(function(item) {
+            // Side-step tags and do your own filtering
+            let detail = item.data.detail;
+            return detail;
+        });
+    });
+
     eleventyConfig.addCollection("homePage", function(collectionApi) {
-        // get unsorted items
         return collectionApi.getFilteredByGlob("./src/pages/home/home.md");
     });
 
     eleventyConfig.addCollection("categories", function(collectionApi) {
-        // get unsorted items
         return collectionApi.getFilteredByGlob("./src/categories/**/*.md");
     });
 
     eleventyConfig.addCollection("homeSections", function(collectionApi) {
-        // get unsorted items
         let hashSet = new Set();
         collectionApi.getFilteredByGlob("./src/pages/home/sections/**/*.md").forEach(function(item) {
             if( "hash" in item.data.eleventyNavigation ) {
