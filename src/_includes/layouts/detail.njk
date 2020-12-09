@@ -16,5 +16,16 @@ layout: base
                 </div>
             </div>
         </div>
+        {#        {% set previousVid = collections.videoDetail | getPreviousCollectionItem(page) %}#}
+        {#        {% set nextVid = collections.videoDetail | getNextCollectionItem(page) %}#}
+
+        {#        <div class="row">#}
+        {#            <div class="col-6">#}
+        {#                {% if previousVid %}<a href="{{ previousVid.url }}">{{ previousVid.data.title }}</a>{% endif %}#}
+        {#            </div>#}
+        {#            <div class="col-6">#}
+        {#                {% if nextVid %}<a href="{{ nextVid.url }}">{{ nextVid.data.title }}</a>{% endif %}#}
+        {#            </div>#}
+        {#        </div>#}
     </div>
 </div>

@@ -11,6 +11,7 @@ module.exports = function(eleventyConfig) {
 
     eleventyConfig.addPassthroughCopy({[path.join(config.devFolder,config.assetsFolder,config.mediaFolder)]: config.mediaFolder})
     eleventyConfig.addPassthroughCopy({[path.join(config.devFolder,config.assetsFolder,config.scriptsFolder)]: config.scriptsFolder})
+    eleventyConfig.addPassthroughCopy({[path.join(config.devFolder,'admin')]: 'login/admin'})
 
     eleventyConfig.setDataDeepMerge(true);
 

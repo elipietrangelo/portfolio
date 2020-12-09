@@ -9,10 +9,10 @@
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/css/styles.css">
     <title>Elisa Pietrangelo - Filmmaker | Home</title>
-    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <meta name="description" content="Hi, I&#39;m Elisa Pietrangelo, a freelance filmmaker based in Luxembourg.">
 </head>
 <body>
-    <div class="page-wrapper d-flex flex-column h-100">
+<div class="page-wrapper d-flex flex-column h-100">
     <button class="ef-navTrigger border-0">
     <span class="action-font text-uppercase">Menu</span>
     <span class="ef-navTrigger__close" aria-hidden="true"></span>
@@ -47,7 +47,8 @@
                 </a></li>
     </ul>
 </nav>
-    <header class="ef-hero">
+    <main class="ef-main flex-grow-1 d-flex flex-column">
+        <header class="ef-hero">
 
     <div class="ef-hero__inner row no-gutters align-items-md-stretch">
 
@@ -72,11 +73,8 @@
         <span class="ef-more__inner"></span>
     </a>
 
-    
-
 </header>
-    <main class="ef-main flex-grow-1 d-flex flex-column">
-        
+
 
     
     
@@ -391,20 +389,7 @@
     </div>
 </div>
     </main>
-    
 </div>
-
     <script src="/js/main.js"></script>
-    <script>
-        if (window.netlifyIdentity) {
-            window.netlifyIdentity.on("init", user => {
-                if (!user) {
-                    window.netlifyIdentity.on("login", () => {
-                        document.location.href = "/admin/";
-                    });
-                }
-            });
-        }
-    </script>
 </body>
 </html>

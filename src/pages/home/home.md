@@ -1,4 +1,6 @@
 ---
+title: Home
+metaDescription: "Hi, I'm Elisa Pietrangelo, a freelance filmmaker based in Luxembourg."
 seeMoreBtnText: See more
 contactHeading: Get in touch
 allWorkLabel: All Work
@@ -14,7 +16,6 @@ permalink: /
 contactText: Don't be shy, follow me and / or say hi!
 workHeading: My Work
 aboutHeading: About Me
-title: Home
 aboutText: >-
   Hey, I’m a freelance filmmaker based in Luxembourg. After my film and
   television studies in the field of directing at the Macromedia University of

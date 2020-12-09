@@ -1,6 +1,7 @@
 ---
-layout: mywork
 title: My work
+metaDescription: Elisa Pietrangelo's projects.
+layout: mywork
 permalink: projects/
 subheading: Filmmaker
 eleventyNavigation:

@@ -1,6 +1,7 @@
 ---
-layout: baseLogin
+layout: base
 ---
+{% include "components/layout/home-sections/hero.njk" %}
 {% set anchorNav = collections.all | eleventyNavigation %}
 {% for elt in anchorNav %}
     {% if elt.key === "hero" %}

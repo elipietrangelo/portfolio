@@ -6,9 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     {% include "components/assets/stylesheets.njk" %}
     <title>Elisa Pietrangelo - Filmmaker | {{ title }}</title>
+    <meta name="description" content="{{ metaDescription }}">
 </head>
 <body{% if additionalClass %} class="{{ additionalClass }}"{% endif %}>
-    {% include "frames/regular-frame.njk" %}
+<div class="page-wrapper d-flex flex-column h-100">
+    {% include "components/layout/nav.njk" %}
+    <main class="ef-main flex-grow-1 d-flex flex-column">
+        {{ content | safe }}
+    </main>
+</div>
     {% include "components/assets/scripts.njk" %}
 </body>
 </html>
