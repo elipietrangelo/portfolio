@@ -1,6 +1,4 @@
 ---
-title: Home
-metaDescription: "Hi, I'm Elisa Pietrangelo, a freelance filmmaker based in Luxembourg."
 seeMoreBtnText: See more
 contactHeading: Get in touch
 allWorkLabel: All Work
@@ -16,14 +14,21 @@ permalink: /
 contactText: Don't be shy, follow me and / or say hi!
 workHeading: My Work
 aboutHeading: About Me
+metaDescription: Hi, I'm Elisa Pietrangelo, a freelance filmmaker based in Luxembourg.
+title: Home
 aboutText: >-
-  Hey, I’m a freelance filmmaker based in Luxembourg. After my film and
-  television studies in the field of directing at the Macromedia University of
-  Applied Sciences in Cologne, I decided to work as an independent filmmaker in
-  Luxembourg. During this period I developed my passion for full-video and
-  storytelling.
+  Hey, I am a freelance filmmaker based in Luxembourg. I studied directing film
+  and television at the Macromedia University of Applied Sciences in Cologne,
+  Germany. Just after that, I decided to work as an independent filmmaker in
+  Luxembourg.
 
 
-  For my screen-play I take inspiration from books and observation of everyday life. My fascination for moving images and image composition leads me to find not only the enthusiasm as director but moreover as a cinematographer. Furthermore I [realize clips](/projects/) for events and corporate videos for institutions. As a passionate surfer and surfskater I also try to unify the essence of arts and sport through my travels.
+  My fascination for full-video and storytelling heightened since then. Moving images and image composition boost my enthusiasm as a director and more over as a cinematographer. 
+
+
+  I realize less for events and corporate videos for institutions. For the screenplay I find inspiring subjects in books and with everyday life observation. 
+
+
+  Beneath, I am a passionate surfer and surfskater. Traveling gives me the opportunity to sublimate the essence of sports, nature and visual art.
 contactID: contact-section
 ---
