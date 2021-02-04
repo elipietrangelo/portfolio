@@ -9,7 +9,7 @@ layout: home
 highlightedVideos:
   - "OPL & Luxtram - Bringing you closer to music. "
   - Core
-  - "Portrait Paul Roettgers "
+  - Regards d'enfants d'éthiopie
 permalink: /
 contactText: Don't be shy, follow me and / or say hi!
 workHeading: My Work
