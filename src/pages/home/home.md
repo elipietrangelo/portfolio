@@ -9,7 +9,7 @@ layout: home
 highlightedVideos:
   - "OPL & Luxtram - Bringing you closer to music. "
   - Core
-  - Regards d'enfants d'éthiopie
+  - "Exposition Julien Hübsch "
 permalink: /
 contactText: Don't be shy, follow me and / or say hi!
 workHeading: My Work
