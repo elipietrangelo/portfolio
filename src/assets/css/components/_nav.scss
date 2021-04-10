@@ -164,7 +164,7 @@
 	
 	&__linkText {
 		--THEME-ACTION: var(--THEME-TEXT);
-		@include textUnderlineGradient(#FFF,0 0.75em,0 20%);
+		@include textUnderlineGradient($body-color,0 0.75em,0 20%);
 		transition: background-size 0.25s ease-out;
 		
 	}
