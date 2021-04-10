@@ -10091,6 +10091,7 @@ H2,
   /* Save root element context for easy access if nesting is needed */
   /* variables specific to current element */
   /* properties of current element  + media queries */
+  display: none;
   width: 3em;
   height: 3em;
   border: 0.3em solid var(--THEME-TEXT);
@@ -10122,6 +10123,8 @@ H2,
   @media (hover: hover) {
     .ef-themeSwitcher:hover::before {
       transform: translateX(-25%); } }
+  .customproperties .ef-themeSwitcher {
+    display: block; }
 
 .ef-hero {
   /* Save root element context for easy access if nesting is needed */
