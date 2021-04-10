@@ -10431,20 +10431,18 @@ H2,
   /* properties of current element  + media queries */
   position: fixed;
   z-index: 1030;
-  bottom: 100%;
+  top: 100%;
+  transform: translateY(15%);
   left: 0;
   overflow: auto;
   width: 100%;
   max-width: 25rem;
-  height: 100%;
+  height: 70vh;
   font-family: "Roboto Condensed", sans-serif;
   background-color: #ad5074;
   color: #fff;
   transition: transform 0.25s ease-in;
-  padding: 2em;
-  display: flex;
-  flex-direction: column;
-  justify-content: end;
+  padding: 2em 2em 0;
   /* Pseudo Elements */
   /*
 	Include elements that are linked to the current element but have to reside at the root level of the stylesheet
@@ -10464,8 +10462,6 @@ H2,
     color: var(--THEME-ACTION-TEXT); }
   @media (min-width: 576px) {
     .ef-nav {
-      bottom: auto;
-      top: 100%;
       padding-top: 7rem;
       justify-content: start; } }
   @media (min-width: 768px) {
@@ -10519,10 +10515,7 @@ H2,
     .customproperties .ef-nav__linkText {
       background-image: linear-gradient(var(--THEME-ACTION), var(--THEME-ACTION)); }
   .ef-nav.-active {
-    transform: translateY(70%); }
-    @media (min-width: 576px) {
-      .ef-nav.-active {
-        transform: translateY(-70%); } }
+    transform: translateY(-100%); }
 
 .ef-navTrigger {
   position: fixed;
@@ -10591,9 +10584,6 @@ H2,
     color: #ad5074; }
     .ef-navTrigger.-active .ef-navTrigger__close {
       transform: scale(1.1); }
-
-:target .ef-nav__link .ef-nav__linkText {
-  background-size: 100% 20%; }
 
 .ef-playButton {
   /* Save root element context for easy access if nesting is needed */
@@ -10833,7 +10823,8 @@ H2,
 	*
 	*/ }
   .ef-videoDetail__header {
-    margin-bottom: 2em; }
+    margin-bottom: 2em;
+    padding-bottom: 4em; }
     .ef-videoDetail__header::before {
       content: "";
       background-color: #5da8ee;
@@ -10842,7 +10833,7 @@ H2,
       top: 0;
       left: 2rem;
       right: 1rem;
-      bottom: -4em; }
+      bottom: 0; }
       .customproperties .ef-videoDetail__header::before {
         background-color: var(--THEME-BG-PRIMARY); }
       @media (min-width: 576px) {

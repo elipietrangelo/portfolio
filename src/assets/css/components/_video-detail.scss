@@ -37,6 +37,7 @@
 		
 		// follows same logic as parent
 		margin-bottom: 2em;
+		padding-bottom: 4em;
 		
 		&::before {
 			content:"";
@@ -49,7 +50,7 @@
 			top: 0;
 			left: 2rem;
 			right: 1rem;
-			bottom: -4em;
+			bottom: 0;
 			@include media-breakpoint-up(sm) {
 				
 				left: 3rem;

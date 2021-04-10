@@ -23,7 +23,9 @@
 
 
 <nav class="ef-nav">
-    <ul class="ef-nav__menu unstyled-list m-0">
-        {%- for entry in navPages %}{{ renderNavListItem(entry) }}{%- endfor -%}
-    </ul>
+    <div class="d-flex flex-column justify-content-end justify-content-sm-start w-100 h-100 pb-10">
+        <ul class="ef-nav__menu unstyled-list m-0">
+            {%- for entry in navPages %}{{ renderNavListItem(entry) }}{%- endfor -%}
+        </ul>
+    </div>
 </nav>

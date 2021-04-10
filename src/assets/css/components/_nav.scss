@@ -14,20 +14,18 @@
 	
 	position: fixed;
 	z-index: z("fixed");
-	bottom: 100%;
+	top: 100%;
+	transform: translateY(15%);
 	left: 0;
 	overflow: auto;
 	width: 100%;
 	max-width: 25rem;
-	height: 100%;
+	height: 70vh;
 	font-family: $action-font;
 	background-color: $action-color;
 	color: #fff;
 	transition: transform 0.25s ease-in;
-	padding: 2em;
-	display: flex;
-	flex-direction: column;
-	justify-content: end;
+	padding: 2em 2em 0;
 	
 	.customproperties & {
 		background-color: var(--THEME-ACTION);
@@ -35,8 +33,6 @@
 	}
 	
 	@include media-breakpoint-up(sm) {
-		bottom: auto;
-		top: 100%;
 		padding-top: 7rem;
 		justify-content: start;
 	}
@@ -87,12 +83,13 @@
 			
 			&::before {
 				
-				content:"";
+				content: "";
 				display: block;
 				width: 1em;
 				height: 0.125em;
 				margin-right: 0.5em;
 				background-color: #fff;
+				
 				.customproperties & {
 					background-color: var(--THEME-ACTION-TEXT);
 				}
@@ -145,9 +142,8 @@
 	
 	&__link {
 		
-		
-		
-		@media (hover:hover) {
+		@media (hover: hover) {
+			
 			&:hover {
 				
 				//text-decoration: none !important;
@@ -158,13 +154,15 @@
 				}
 				
 			}
+			
 		}
 		
 	}
 	
 	&__linkText {
+		
 		--THEME-ACTION: var(--THEME-TEXT);
-		@include textUnderlineGradient($body-color,0 0.75em,0 20%);
+		@include textUnderlineGradient($body-color, 0 0.75em, 0 20%);
 		transition: background-size 0.25s ease-out;
 		
 	}
@@ -178,10 +176,10 @@
 		
 		// follows same logic as base element
 		
-		transform: translateY(70%);
-		@include media-breakpoint-up(sm) {
-			transform: translateY(-70%);
-		}
+		transform: translateY(-100%);
+		//@include media-breakpoint-up(sm) {
+		//	transform: translateY(0);
+		//}
 		
 	}
 	
@@ -226,6 +224,7 @@
 	right: 1em;
 	background-color: $action-color;
 	color: #fff;
+	
 	.customproperties & {
 		background-color: var(--THEME-ACTION);
 		color: var(--THEME-ACTION-TEXT);
@@ -270,9 +269,11 @@
 		top: 0;
 		left: 0;
 		background-color: #fff;
+		
 		.customproperties & {
 			background-color: var(--THEME-BG);
 		}
+		
 		transition: all 0.2s ease-out;
 		
 		&::before,
@@ -282,20 +283,22 @@
 			position: absolute;
 			top: 50%;
 			left: 50%;
-			transform: translate(-50%,-50%);
+			transform: translate(-50%, -50%);
 			height: 50%;
 			width: 0.2em;
 			background-color: $action-color;
+			
 			.customproperties & {
 				background-color: var(--THEME-ACTION);
 			}
 		}
 		
 		&::before {
-			transform: translate(-50%,-50%) rotate(45deg);
+			transform: translate(-50%, -50%) rotate(45deg);
 		}
+		
 		&::after {
-			transform: translate(-50%,-50%) rotate(-45deg);
+			transform: translate(-50%, -50%) rotate(-45deg);
 		}
 		
 		
@@ -323,16 +326,4 @@
 		
 	}
 	
-}
-
-:target {
-	.#{$namespace}nav__link {
-		
-		.#{$namespace}nav__linkText {
-			
-			background-size: 100% 20%;
-			
-		}
-		
-	}
 }
