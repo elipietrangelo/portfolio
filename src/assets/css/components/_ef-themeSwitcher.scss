@@ -21,12 +21,12 @@
 	&::before{
 		content:"";
 		position: absolute;
-		top: 0;
+		top: 50%;
 		left: 0;
 		height: 110%;
 		width: 100%;
 		background-color: var(--THEME-TEXT);
-		transform: translateX(-50%);
+		transform: translate(-50%,-50%);
 		transition: transform 0.15s linear;
 	}
 	
@@ -64,7 +64,7 @@
 	&:hover {
 		@media (hover: hover) {
 			&::before {
-				transform: translateX(-25%);
+				transform: translate(-25%,-50%);
 			}
 		}
 	}
