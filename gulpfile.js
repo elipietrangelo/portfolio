@@ -34,7 +34,10 @@ let postCSSPlugins = [
             /\.-active/,
             /\.-transitioned/,
             /\.-playing/,
-            /\.overflow-hidden/
+            /\.overflow-hidden/,
+            /\.customproperties/,
+            /\.light-theme/,
+            /\.dark-theme/
         ]
     }),
     cssnano({
