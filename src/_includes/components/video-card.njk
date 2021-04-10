@@ -5,7 +5,9 @@
                 <div class="embed-responsive-item centered-bgi ef-videoCard__embeddedItem"
                      style="background-image:url(https://img.youtube.com/vi/{{ href }}/maxresdefault.jpg);"></div>
             </div>
-            <span class="ef-videoCard__play contained-bgi"></span>
+            <span class="ef-videoCard__play">
+                {% include "components/assets/svg/play-button.svg" %}
+            </span>
         </div>
         <div class="ef-videoCard__content position-relative">
             <h3 class="ef-videoCard__title h3 action-font">

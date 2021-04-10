@@ -39,8 +39,12 @@
 		width: 6.5em;
 		height: 6.5em;
 		border-radius: 50%;
-		border: 0.25rem solid;
-		color: $crimson;
+		background-color: $action-color;
+		color: #fff;
+		.customproperties & {
+			background-color: var(--THEME-ACTION);
+			color: var(--THEME-BG);
+		}
 		font-size: $font-size-xl;
 		text-transform: uppercase;
 		display: flex;
@@ -51,13 +55,17 @@
 		@media (hover: hover) {
 			&:hover {
 				
-				border-color: $crimson;
-				background-color: $crimson;
-				color: #fff;
+				transform: scale(0.8);
 				
 			}
 		}
 		
+	}
+	
+	&__seeMoreArrow {
+	
+	
+	
 	}
 	
 	

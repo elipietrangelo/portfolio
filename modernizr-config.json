@@ -1,0 +1,5 @@
+{
+  "options": ["setClasses"],
+  "tests": ["customproperties"],
+  "excludeTests": ["opacity", "supports", "target", "contains"]
+}

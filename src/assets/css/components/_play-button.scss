@@ -1,4 +1,4 @@
-.#{$namespace}editable {
+.#{$namespace}playButton {
 	
 	/* Save root element context for easy access if nesting is needed */
 	
@@ -31,40 +31,17 @@
 	
 	/* children - write selector in full in comments in order to facilitate search */
 	
-	A {
-		
-		@include textUnderlineGradient($action-color,0 bottom,100% 20%);
-		padding: 0 0.1em;
-		transition: color 0.15s linear, background-size 0.25s ease-out;
-		
-		@media (hover: hover) {
-			
-			&:hover {
-				
-				color: #fff;
-				background-size: 100% 100%;
-				
-			}
-			
+	path {
+		fill: $action-color;
+		.customproperties & {
+			fill: var(--THEME-ACTION);
 		}
-		
-	}
-	
-	P {
-		margin: 0;
-		
-		+ P {
-			
-			margin-top: 1em;
-			
-		}
-		
 	}
 	
 	
 	/* modifiers */
 	
-	// editable -altStyle
+	// playButton -altStyle
 	&.-altStyle {
 		
 		// follows same logic as base element
@@ -76,7 +53,7 @@
 	
 	&:hover {
 		@media (hover: hover) {
-			
+		
 		}
 	}
 	

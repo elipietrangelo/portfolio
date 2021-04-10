@@ -16,17 +16,6 @@
 		height: 95vh;
 	}
 	
-	//&::before {
-	//	content:"";
-	//	position: absolute;
-	//	z-index: z("negative");
-	//	top: 0;
-	//	left: 0;
-	//	bottom: -2em;
-	//	width: 100%;
-	//	@include linear-gradient-to-deg(120deg,$lightblue, -20%, #FFF, 20%);
-	//}
-	
 	&::after {
 	}
 	
@@ -82,8 +71,6 @@
 			font-size: 4.5rem;
 		}
 		
-		@include media-breakpoint-up(xl) {
-		}
 		@media screen and (min-width: 1500px) {
 			font-size: 5.5rem;
 		}
@@ -99,9 +86,11 @@
 		left: 0;
 		white-space: nowrap;
 		margin: 0;
-		background: $lightblue;
+		background-color: $primary-bg-color;
 		padding: 0.25em 0.25em 0.25em 0;
-		
+		.customproperties & {
+			background-color: var(--THEME-BG-PRIMARY);
+		}
 		@include media-breakpoint-up(sm) {
 			transform: rotate(90deg) translate(0);
 			right: 0;
@@ -109,6 +98,9 @@
 			transform-origin: bottom right;
 			padding: 0.35em 0 0.25em 0.25em;
 			background-color: #fff;
+			.customproperties & {
+				background-color: var(--THEME-BG);
+			}
 		}
 	}
 	
@@ -128,7 +120,10 @@
 		&::before {
 			
 			content:"";
-			background-color: $lightblue;
+			background-color: $primary-bg-color;
+			.customproperties & {
+				background-color: var(--THEME-BG-PRIMARY);
+			}
 			position: absolute;
 			z-index: z("negative");
 			top: -1em;
@@ -175,15 +170,6 @@
 		}
 	}
 	
-	&__imgBg {
-		
-		background: $lightblue;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		
-	}
-	
 	
 	/* modifiers */
 	
@@ -199,7 +185,7 @@
 	
 	&:hover {
 		@media (hover: hover) {
-			
+		
 		}
 	}
 	
@@ -214,7 +200,7 @@
 	}
 	
 	/* random parent element */
-	/* 
+	/*
 	*
 	*   Syntax : .randomParentElt & {}
 	*

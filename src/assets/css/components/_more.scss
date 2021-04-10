@@ -62,7 +62,10 @@
 		border-width: $stroke-width $stroke-width 0 0;
 		border-style: solid;
 		transform: rotate(135deg);
-		color: $crimson;
+		color: $action-color;
+		.customproperties & {
+			color: var(--THEME-ACTION);
+		}
 		position: relative;
 		top: -0.5em;
 		transition: all 0.2s ease-out;

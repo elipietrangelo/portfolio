@@ -1,5 +1,44 @@
+:root {
+	
+	--THEME-BG: #fff;
+	--THEME-TEXT: #{$body-color};
+	--THEME-BG-PRIMARY: #{$primary-bg-color};
+	--THEME-ACTION: #{$action-color};
+	--THEME-ACTION-TEXT: var(--THEME-BG);
+	--THEME-ABOUT-TEXT-BG: #{$about-bg-dark};
+	
+	&.dark-theme {
+		--THEME-BG: #{$body-color};
+		--THEME-TEXT: #fff;
+		--THEME-BG-PRIMARY: #{$primary-bg-color-dark};
+		--THEME-ACTION: #{$action-color-dark};
+		--THEME-ACTION-TEXT: #{$body-color};
+		--THEME-ABOUT-TEXT-BG: #{$about-bg-dark};
+	}
+	
+	@media (prefers-color-scheme: dark) {
+		--THEME-BG: #{$body-color};
+		--THEME-TEXT: #fff;
+		--THEME-BG-PRIMARY: #{$primary-bg-color-dark};
+		--THEME-ACTION: #{$action-color-dark};
+		--THEME-ACTION-TEXT: #{$body-color};
+		--THEME-ABOUT-TEXT-BG: #{$about-bg-dark};
+		
+		&.light-theme {
+			--THEME-BG: #fff;
+			--THEME-TEXT: #{$body-color};
+			--THEME-BG-PRIMARY: #{$primary-bg-color};
+			--THEME-ACTION: #{$action-color};
+			--THEME-ACTION-TEXT: var(--THEME-BG);
+			--THEME-ABOUT-TEXT-BG: #{$about-bg-dark};
+		}
+	}
+}
+
+
 HTML {
 	scroll-behavior: smooth;
+	overflow-x: hidden;
 }
 
 HTML,
@@ -8,19 +47,14 @@ BODY {
 }
 
 BODY {
+	background-color: #fff;
+	color: $dark;
+	.customproperties & {
+		background-color: var(--THEME-BG);
+		color: var(--THEME-TEXT);
+	}
 	padding-bottom: 5em;
 	@include media-breakpoint-up(sm) {
 		padding-bottom: 0;
 	}
-}
-
-A {
-	
-	text-decoration: none;
-	color: $dark;
-	&:hover {
-		text-decoration: none;
-		color: $dark;
-	}
-	
 }

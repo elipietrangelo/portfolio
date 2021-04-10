@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script>
+        !function(e,n,s){var l=[],o={_version:"3.11.4",_config:{classPrefix:"",enableClasses:!0,enableJSClass:!0,usePrefixes:!0},_q:[],on:function(e,n){var s=this;setTimeout(function(){n(s[e])},0)},addTest:function(e,n,s){l.push({name:e,fn:n,options:s})},addAsyncTest:function(e){l.push({name:null,fn:e})}};(f=function(){}).prototype=o;var f=new f,r=[];var a=s.documentElement,t="svg"===a.nodeName.toLowerCase();var i,c,p,u,n=n.CSS&&n.CSS.supports.bind(n.CSS)||n.supportsCSS;f.addTest("customproperties",!!n&&(n("--f:0")||n("--f",0))),function(){var e,n,s,o,a,t,i;for(i in l)if(l.hasOwnProperty(i)){if(e=[],n=l[i],n.name&&(e.push(n.name.toLowerCase()),n.options&&n.options.aliases&&n.options.aliases.length))for(s=0;s<n.options.aliases.length;s++)e.push(n.options.aliases[s].toLowerCase());for(o="function"==typeof n.fn?n.fn():n.fn,a=0;a<e.length;a++)1===(t=e[a].split(".")).length?f[t[0]]=o:(f[t[0]]&&(!f[t[0]]||f[t[0]]instanceof Boolean)||(f[t[0]]=new Boolean(f[t[0]])),f[t[0]][t[1]]=o),r.push((o?"":"no-")+t.join("-"))}}(),i=r,p=a.className,u=f._config.classPrefix||"",t&&(p=p.baseVal),f._config.enableJSClass&&(c=new RegExp("(^|\\s)"+u+"no-js(\\s|$)"),p=p.replace(c,"$1"+u+"js$2")),f._config.enableClasses&&(0<i.length&&(p+=" "+u+i.join(" "+u)),t?a.className.baseVal=p:a.className=p),delete o.addTest,delete o.addAsyncTest;for(var d=0;d<f._q.length;d++)f._q[d]();e.Modernizr=f}(window,window,document);
+    </script>
     <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
@@ -24,25 +27,25 @@
 
 
 <nav class="ef-nav">
-    <ul class="ef-nav__menu unstyled-list d-flex flex-column justify-content-center m-0 h-100">
+    <ul class="ef-nav__menu unstyled-list m-0">
         
             <li class="ef-nav__item -hasChildren">
-                <a class="ef-nav__link" href="/#work">
+                <a class="ef-nav__link h2" href="/#work">
                     <span class="ef-nav__linkText">Featured work</span>
                 </a><ul class="ef-nav__menu ef-nav__subMenu unstyled-list">
             <li class="ef-nav__item">
-                <a class="ef-nav__link" href="/projects/">
+                <a class="ef-nav__link h2" href="/projects/">
                     <span class="ef-nav__linkText">All work</span>
                 </a></li>
     </ul></li>
     
             <li class="ef-nav__item">
-                <a class="ef-nav__link" href="/#about">
+                <a class="ef-nav__link h2" href="/#about">
                     <span class="ef-nav__linkText">About</span>
                 </a></li>
     
             <li class="ef-nav__item">
-                <a class="ef-nav__link" href="/#contact">
+                <a class="ef-nav__link h2" href="/#contact">
                     <span class="ef-nav__linkText">Contact</span>
                 </a></li>
     </ul>
@@ -126,7 +129,7 @@
                     
                 
                     
-                        <div class="col-12 col-sm-10 mb-5 mb-md-10">
+                        <div class="col-12 col-sm-10 mb-5 mb-md-10 flex-basis-auto">
                             
                                 
     <article class="ef-videoCard " data-title="OPL &amp; Luxtram - Bringing you closer to music. ">
@@ -135,7 +138,14 @@
                 <div class="embed-responsive-item centered-bgi ef-videoCard__embeddedItem"
                      style="background-image:url(https://img.youtube.com/vi/oSTtGpsF-Yc/maxresdefault.jpg);"></div>
             </div>
-            <span class="ef-videoCard__play contained-bgi"></span>
+            <span class="ef-videoCard__play">
+                <svg class="ef-playButton img-fluid" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+	 width="572.611px" height="572.611px" viewBox="0 -10 572.611 572.611" style="enable-background:new 0 -10 572.611 572.611;">
+	<path fill="none" stroke-width="1.5rem" d="M486.413,221.412L122.347,12.916c-52.938-30.318-95.852-5.44-95.852,55.563v415.652c0,61.004,42.914,85.882,95.852,55.563
+			l364.066-208.49C539.351,300.887,539.351,251.731,486.413,221.412z"/>
+</svg>
+
+            </span>
         </div>
         <div class="ef-videoCard__content position-relative">
             <h3 class="ef-videoCard__title h3 action-font">
@@ -154,6 +164,10 @@
                         </div>
                     
                 
+                    
+                
+                    
+                
             
                 
                 
@@ -184,7 +198,7 @@
                     
                 
                     
-                        <div class="col-12 col-sm-10 mb-5 mb-md-10">
+                        <div class="col-12 col-sm-10 mb-5 mb-md-10 flex-basis-auto">
                             
                                 
     <article class="ef-videoCard -hasShapeInverted" data-title="Core">
@@ -193,7 +207,14 @@
                 <div class="embed-responsive-item centered-bgi ef-videoCard__embeddedItem"
                      style="background-image:url(https://img.youtube.com/vi/PkeFXhNWyNo/maxresdefault.jpg);"></div>
             </div>
-            <span class="ef-videoCard__play contained-bgi"></span>
+            <span class="ef-videoCard__play">
+                <svg class="ef-playButton img-fluid" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+	 width="572.611px" height="572.611px" viewBox="0 -10 572.611 572.611" style="enable-background:new 0 -10 572.611 572.611;">
+	<path fill="none" stroke-width="1.5rem" d="M486.413,221.412L122.347,12.916c-52.938-30.318-95.852-5.44-95.852,55.563v415.652c0,61.004,42.914,85.882,95.852,55.563
+			l364.066-208.49C539.351,300.887,539.351,251.731,486.413,221.412z"/>
+</svg>
+
+            </span>
         </div>
         <div class="ef-videoCard__content position-relative">
             <h3 class="ef-videoCard__title h3 action-font">
@@ -231,6 +252,10 @@
                 
                     
                 
+                    
+                
+                    
+                
             
                 
                 
@@ -253,26 +278,60 @@
                     
                 
                     
-                        <div class="col-12 col-sm-10 mb-5 mb-md-10">
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                        <div class="col-12 col-sm-10 mb-5 mb-md-10 flex-basis-auto">
                             
                                 
-    <article class="ef-videoCard " data-title="Portrait Paul Roettgers ">
-        <div class="ef-videoCard__video" data-id="OpWH0Cbf7DQ">
+    <article class="ef-videoCard " data-title="Exposition Julien Hübsch ">
+        <div class="ef-videoCard__video" data-id="el3_Mw8BqUg">
             <div class="embed-responsive embed-responsive-1by1">
                 <div class="embed-responsive-item centered-bgi ef-videoCard__embeddedItem"
-                     style="background-image:url(https://img.youtube.com/vi/OpWH0Cbf7DQ/maxresdefault.jpg);"></div>
+                     style="background-image:url(https://img.youtube.com/vi/el3_Mw8BqUg/maxresdefault.jpg);"></div>
             </div>
-            <span class="ef-videoCard__play contained-bgi"></span>
+            <span class="ef-videoCard__play">
+                <svg class="ef-playButton img-fluid" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+	 width="572.611px" height="572.611px" viewBox="0 -10 572.611 572.611" style="enable-background:new 0 -10 572.611 572.611;">
+	<path fill="none" stroke-width="1.5rem" d="M486.413,221.412L122.347,12.916c-52.938-30.318-95.852-5.44-95.852,55.563v415.652c0,61.004,42.914,85.882,95.852,55.563
+			l364.066-208.49C539.351,300.887,539.351,251.731,486.413,221.412z"/>
+</svg>
+
+            </span>
         </div>
         <div class="ef-videoCard__content position-relative">
             <h3 class="ef-videoCard__title h3 action-font">
                 
-                    <span class="ef-videoCard__titleInner">
-                        Portrait Paul Roettgers 
-                    </span>
+                    <a href="false" class="ef-videoCard__titleInner stretched-link">
+                        Exposition Julien Hübsch 
+                    </a>
                 
 
             </h3>
+            
+                <p class="ef-videoCard__description">
+                    
+                        chantier abstrait / to be continued
+                    
+                </p>
+                
             
         </div>
     </article>
@@ -281,25 +340,9 @@
                         </div>
                     
                 
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
             
         
-        <div class="col-sm-5 align-self-end">
+        <div class="col-sm-5 align-self-end flex-basis-auto">
             <a href="projects/" class="ef-work__seeMore action-font mx-auto">See more</a>
         </div>
     </div>
@@ -316,8 +359,10 @@
 </div>
 <div class="ef-about__bg">
     <div class="container-lg">
-        <div class="ef-about__text ef-editable"><p>Hey, I’m a freelance filmmaker based in Luxembourg. After my film and television studies in the field of directing at the Macromedia University of Applied Sciences in Cologne, I decided to work as an independent filmmaker in Luxembourg. During this period I developed my passion for full-video and storytelling.</p>
-<p>For my screen-play I take inspiration from books and observation of everyday life. My fascination for moving images and image composition leads me to find not only the enthusiasm as director but moreover as a cinematographer. Furthermore I <a href="/projects/">realize clips</a> for events and corporate videos for institutions. As a passionate surfer and surfskater I also try to unify the essence of arts and sport through my travels.</p>
+        <div class="ef-about__text ef-editable"><p>Hey, I am a freelance filmmaker based in Luxembourg. I studied directing film and television at the Macromedia University of Applied Sciences in Cologne, Germany. Just after that, I decided to work as an independent filmmaker in Luxembourg.</p>
+<p>My fascination for full-video and storytelling heightened since then. Moving images and image composition boost my enthusiasm as a director and more over as a cinematographer.</p>
+<p>I realize less for events and corporate videos for institutions. For the screenplay I find inspiring subjects in books and with everyday life observation.</p>
+<p>Beneath, I am a passionate surfer and surfskater. Traveling gives me the opportunity to sublimate the essence of sports, nature and visual art.</p>
 </div>
     </div>
 </div>
@@ -377,7 +422,9 @@
     
 
 <div class="ef-modal">
-    <button class="ef-modal__close border-0"></button>
+    <button type="button" class="ef-modal__close border-0">
+        <span class="sr-only">Close</span>
+    </button>
     <div class="d-flex h-100 align-items-center">
         <div class="container">
             <div class="ef-modal__embed">
@@ -389,6 +436,11 @@
     </div>
 </div>
     </main>
+    <footer class="text-center mt-5 mt-md-10 mb-5">
+    <div class="d-inline-flex rounded-circle overflow-hidden">
+        <button type="button" id="themeSwitcher" class="ef-themeSwitcher position-relative rounded-circle p-0 m-0"></button>
+    </div>
+</footer>
 </div>
     <script src="/js/main.js"></script>
 </body>

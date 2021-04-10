@@ -5,15 +5,3 @@
 .contained-bgi {
 	@include contained-bgi();
 }
-
-.hero-gradient {
-	@include linear-gradient-to-deg(180deg,$lightblue,0%,#fff,20%);
-}
-
-.hero-bg {
-	background-color: $lightblue;
-}
-
-.underlineBlue {
-	@include textUnderlineGradient($lightblue, 0 0.8em, 100% 40%);
-}

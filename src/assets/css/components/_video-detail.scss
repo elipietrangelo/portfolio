@@ -40,7 +40,10 @@
 		
 		&::before {
 			content:"";
-			background-color: $lightblue;
+			background-color: $primary-bg-color;
+			.customproperties & {
+				background-color: var(--THEME-BG-PRIMARY);
+			}
 			position: absolute;
 			z-index: z("negative");
 			top: 0;
@@ -113,6 +116,10 @@
 				
 			}
 			
+			.customproperties & {
+				color: var(--THEME-BG);
+			}
+			
 		}
 		
 	}
@@ -125,6 +132,12 @@
 		
 		@include media-breakpoint-up(sm) {
 			max-width: 50ch;
+		}
+		
+		.customproperties & {
+			
+			background-color: var(--THEME-BG);
+			
 		}
 		
 	}

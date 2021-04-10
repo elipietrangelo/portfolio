@@ -78,7 +78,10 @@
 		&::before {
 			
 			content: "";
-			background-color: $lightblue;
+			background-color: $primary-bg-color;
+			.customproperties & {
+				background-color: var(--THEME-BG-PRIMARY);
+			}
 			position: absolute;
 			z-index: z("neganegative");
 			top: -8em;
@@ -117,8 +120,6 @@
 	
 	&__socialItemText {
 		
-		//@include textUnderlineGradient($crimson,0 0.65em, 100% 50%);
-		
 		&::before {
 			
 			content: attr(data-attr);
@@ -129,7 +130,10 @@
 			right: 15%;
 			font-size: 210%;
 			opacity: 0.15;
-			color: $crimson;
+			color: $action-color;
+			.customproperties & {
+				color: var(--THEME-ACTION);
+			}
 			transition: opacity 0.15s linear;
 			
 			

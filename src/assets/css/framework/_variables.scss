@@ -22,37 +22,19 @@ $grid-gutter-width:           30px;
 //
 // Style anchor elements.
 
-$crimson: #ad5074;
-$lightblue: #5da8ee;//#0082cf
+$link-color:                              inherit;
+$link-hover-color:                        inherit;
+$link-hover-decoration:                   none;
+$body-color:                #0e141c;
 
-$primary:       #FAF1E5;
-$secondary:     #3EC270;
-$secondary-variation:     #2B7548;
-$success:       $green !default;
-$info:          $cyan !default;
-$warning:       $yellow !default;
-$danger:        $red !default;
-$light:         $gray-100 !default;
-$dark:          $gray-800;
-$light-gray:          #f4f4f4;
+$action-color: #ad5074;
+$primary-bg-color: #5da8ee;//#0082cf
+$about-bg: #3d4856;
 
-$theme-colors: ();
-$theme-colors: map-merge(
-	(
-		"primary":     $primary,
-		"secondary":   $secondary,
-		"secondary-d": $secondary-variation,
-		"info":       $info,
-		"warning":    $warning,
-		"danger":     $danger,
-		"light":      $light,
-		"dark":       $dark,
-		"light-gray":       $light-gray
-	),
-	$theme-colors
-);
+$action-color-dark: #f34d76;
+$primary-bg-color-dark: #0043aa;//#0082cf
+$about-bg-dark: #000;
 
-$body-color:                $dark;
 
 // Typography
 //

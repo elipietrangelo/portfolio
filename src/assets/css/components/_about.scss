@@ -39,6 +39,9 @@
 			
 			content: "";
 			background-color: #3d4856;
+			.customproperties & {
+				background-color: var(--THEME-ABOUT-TEXT-BG);
+			}
 			position: absolute;
 			z-index: z("neganegative");
 			top: 4em;
@@ -69,6 +72,12 @@
 		
 		@include media-breakpoint-up(md) {
 			padding: 2em;
+		}
+		
+		.customproperties & {
+			
+			background-color: var(--THEME-BG);
+			
 		}
 		
 	}

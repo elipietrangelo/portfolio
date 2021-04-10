@@ -9,7 +9,7 @@
                 {% set highlightLoop = loop.index %}
                 {% for video in collections.videos %}
                     {% if highlightedVideo == video.data.title %}
-                        <div class="col-12 col-sm-10 mb-5 mb-md-10">
+                        <div class="col-12 col-sm-10 mb-5 mb-md-10 flex-basis-auto">
                             {% if highlightLoop === 2 %}
                                 {{ macro.videoCard(video.data.href,video.data.title,video.data.description,video.data.detail,video.url,"-hasShapeInverted") }}
                             {% else %}
@@ -20,7 +20,7 @@
                 {% endfor %}
             {% endfor %}
         {% endfor %}
-        <div class="col-sm-5 align-self-end">
+        <div class="col-sm-5 align-self-end flex-basis-auto">
             <a href="projects/" class="ef-work__seeMore action-font mx-auto">{{ seeMoreBtnText }}</a>
         </div>
     </div>

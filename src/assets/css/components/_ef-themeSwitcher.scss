@@ -1,4 +1,4 @@
-.#{$namespace}editable {
+.#{$namespace}themeSwitcher {
 	
 	/* Save root element context for easy access if nesting is needed */
 	
@@ -11,15 +11,24 @@
 	
 	
 	/* properties of current element  + media queries */
-	
-	
+	width: 3em;
+	height: 3em;
+	border: 0.3em solid var(--THEME-TEXT);
+	background-color: transparent;
 	/* Pseudo Elements */
 	
-	&::before {
+	&::before{
+		content:"";
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 110%;
+		width: 100%;
+		background-color: var(--THEME-TEXT);
+		transform: translateX(-50%);
+		transition: transform 0.15s linear;
 	}
 	
-	&::after {
-	}
 	
 	/*
 	Include elements that are linked to the current element but have to reside at the root level of the stylesheet
@@ -31,40 +40,17 @@
 	
 	/* children - write selector in full in comments in order to facilitate search */
 	
-	A {
+	// themeSwitcher__childElement
+	&__childElement {
 		
-		@include textUnderlineGradient($action-color,0 bottom,100% 20%);
-		padding: 0 0.1em;
-		transition: color 0.15s linear, background-size 0.25s ease-out;
-		
-		@media (hover: hover) {
-			
-			&:hover {
-				
-				color: #fff;
-				background-size: 100% 100%;
-				
-			}
-			
-		}
-		
-	}
-	
-	P {
-		margin: 0;
-		
-		+ P {
-			
-			margin-top: 1em;
-			
-		}
+		// follows same logic as parent
 		
 	}
 	
 	
 	/* modifiers */
 	
-	// editable -altStyle
+	// themeSwitcher -altStyle
 	&.-altStyle {
 		
 		// follows same logic as base element
@@ -76,7 +62,9 @@
 	
 	&:hover {
 		@media (hover: hover) {
-			
+			&::before {
+				transform: translateX(-25%);
+			}
 		}
 	}
 	

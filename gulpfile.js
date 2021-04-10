@@ -12,6 +12,10 @@ const del = require("del");
 const postcssUncss = require('postcss-uncss');
 const config = require('config');
 
+const uglify = require('gulp-uglify');
+const modernizr = require('gulp-modernizr');
+const modernizrConfig = require('./modernizr-config.json');
+
 let postCSSPlugins = [
 
     autoprefixer(
@@ -73,6 +77,13 @@ function prodStyles(done) {
 
 }
 
+function modernizrJS () {
+    return src(paths.join(config.devFolder,config.assetsFolder,config.scriptsFolder, '**/*.js'))
+        .pipe(modernizr(modernizrConfig))
+        .pipe(uglify())
+        .pipe(dest(paths.join(config.devFolder, config.assetsFolder, config.scriptsFolder)));
+}
+
 function deleteDist(done){
     return del(['./dist/'])
     done();
@@ -89,6 +100,7 @@ function serve() {
 
 exports.styles = styles;
 exports.prodStyles = prodStyles;
+exports.modernizrJS = modernizrJS;
 exports.deleteDist = deleteDist;
 exports.delBuild = series(deleteDist, styles);
 exports.serve = parallel(styles,serve);

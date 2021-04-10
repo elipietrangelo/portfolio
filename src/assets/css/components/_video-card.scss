@@ -93,8 +93,10 @@
 			bottom: -2.75em;
 			left: -1em;
 			right: 1em;
-			background-color: $lightblue;
-			will-change: width;
+			background-color: $primary-bg-color;
+			.customproperties & {
+				background-color: var(--THEME-BG-PRIMARY);
+			}
 			
 			@include media-breakpoint-up(md) {
 				width: 100%;
@@ -115,12 +117,6 @@
 		&:hover {
 			
 			@media (hover: hover) {
-				
-				//&::before {
-				//	width: calc(50vw + 1.75em);
-				//	background-color: $dark;
-				//	right: -1.75em;
-				//}
 				
 				#{$self}__play {
 					transform: translate(-50%, -50%) scale(0.75);
@@ -150,7 +146,6 @@
 		
 		// follows same logic as parent
 		
-		color: $dark;
 		padding: 2rem 0 0;
 		
 		@include media-breakpoint-up(md) {
@@ -164,7 +159,7 @@
 				
 				#{$self}__more {
 					
-					color: $dark;
+					color: inherit;
 					background-size: 100% 50%;
 					
 				}
@@ -190,7 +185,6 @@
 		left: 1em;
 		transition: all 0.15s linear;
 		cursor: pointer;
-		background-image: url("#{$mediaPath}play-button.svg");
 		
 		@include media-breakpoint-up(md) {
 			top: 50%;
@@ -205,8 +199,12 @@
 	
 	&__more {
 		
-		color: $crimson;
-		@include textUnderlineGradient($crimson,0 0.9em,0 50%);
+		color: $action-color;
+		@include textUnderlineGradient($action-color,0 0.9em,0 50%);
+		.customproperties & {
+			color: var(--THEME-ACTION);
+			@include textUnderlineGradient(var(--THEME-ACTION),0 0.9em,0 50%);
+		}
 		transition: color 0.25s linear, background-size 0.25s ease-out;
 		font-weight: 900;
 		
@@ -286,7 +284,10 @@
 			
 			&::after {
 				
-				color: $crimson;
+				color: $action-color;
+				.customproperties & {
+					color: var(--THEME-ACTION);
+				}
 				opacity: 0.15;
 				
 			}

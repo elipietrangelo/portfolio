@@ -4,7 +4,9 @@
             <div class="embed-responsive embed-responsive-16by9">
                 <div class="embed-responsive-item centered-bgi"
                      style="background-image:url(https://img.youtube.com/vi/{{ href }}/hqdefault.jpg);" data-id="{{ href }}">
-                    <span class="ef-videoItem__play contained-bgi"></span>
+                    <span class="ef-videoItem__play">
+                        {% include "components/assets/svg/play-button.svg" %}
+                    </span>
                 </div>
             </div>
         </div>

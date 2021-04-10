@@ -14,7 +14,10 @@
 	
 	font-size: $font-size-sm;
 	border-radius: 30px;
-	color: $crimson;
+	color: $action-color;
+	.customproperties & {
+		color: var(--THEME-ACTION);
+	}
 	border: 0.2em solid;
 	transition:
 				border-color 0.15s ease-out,
@@ -55,9 +58,14 @@
 		
 		// follows same logic as base element
 		
-		border-color: $crimson;
-		background-color: $crimson;
+		border-color: $action-color;
+		background-color: $action-color;
 		color: #fff;
+		.customproperties & {
+			border-color: var(--THEME-ACTION);
+			background-color: var(--THEME-ACTION);
+			color: var(--THEME-BG);
+		}
 		
 	}
 	
@@ -66,9 +74,14 @@
 	
 	&:hover {
 		@media (hover: hover) {
-			border-color: $crimson;
-			background-color: $crimson;
+			border-color: $action-color;
+			background-color: $action-color;
 			color: #fff;
+			.customproperties & {
+				border-color: var(--THEME-ACTION);
+				background-color: var(--THEME-ACTION);
+				color: var(--THEME-BG);
+			}
 		}
 	}
 	

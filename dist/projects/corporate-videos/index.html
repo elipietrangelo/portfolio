@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script>
+        !function(e,n,s){var l=[],o={_version:"3.11.4",_config:{classPrefix:"",enableClasses:!0,enableJSClass:!0,usePrefixes:!0},_q:[],on:function(e,n){var s=this;setTimeout(function(){n(s[e])},0)},addTest:function(e,n,s){l.push({name:e,fn:n,options:s})},addAsyncTest:function(e){l.push({name:null,fn:e})}};(f=function(){}).prototype=o;var f=new f,r=[];var a=s.documentElement,t="svg"===a.nodeName.toLowerCase();var i,c,p,u,n=n.CSS&&n.CSS.supports.bind(n.CSS)||n.supportsCSS;f.addTest("customproperties",!!n&&(n("--f:0")||n("--f",0))),function(){var e,n,s,o,a,t,i;for(i in l)if(l.hasOwnProperty(i)){if(e=[],n=l[i],n.name&&(e.push(n.name.toLowerCase()),n.options&&n.options.aliases&&n.options.aliases.length))for(s=0;s<n.options.aliases.length;s++)e.push(n.options.aliases[s].toLowerCase());for(o="function"==typeof n.fn?n.fn():n.fn,a=0;a<e.length;a++)1===(t=e[a].split(".")).length?f[t[0]]=o:(f[t[0]]&&(!f[t[0]]||f[t[0]]instanceof Boolean)||(f[t[0]]=new Boolean(f[t[0]])),f[t[0]][t[1]]=o),r.push((o?"":"no-")+t.join("-"))}}(),i=r,p=a.className,u=f._config.classPrefix||"",t&&(p=p.baseVal),f._config.enableJSClass&&(c=new RegExp("(^|\\s)"+u+"no-js(\\s|$)"),p=p.replace(c,"$1"+u+"js$2")),f._config.enableClasses&&(0<i.length&&(p+=" "+u+i.join(" "+u)),t?a.className.baseVal=p:a.className=p),delete o.addTest,delete o.addAsyncTest;for(var d=0;d<f._q.length;d++)f._q[d]();e.Modernizr=f}(window,window,document);
+    </script>
     <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
@@ -24,29 +27,29 @@
 
 
 <nav class="ef-nav">
-    <ul class="ef-nav__menu unstyled-list d-flex flex-column justify-content-center m-0 h-100">
+    <ul class="ef-nav__menu unstyled-list m-0">
             <li class="ef-nav__item">
-                <a class="ef-nav__link" href="/">
+                <a class="ef-nav__link h2" href="/">
                     <span class="ef-nav__linkText">Home</span>
                 </a></li>
     
             <li class="ef-nav__item -hasChildren">
-                <a class="ef-nav__link" href="/#work">
+                <a class="ef-nav__link h2" href="/#work">
                     <span class="ef-nav__linkText">Featured work</span>
                 </a><ul class="ef-nav__menu ef-nav__subMenu unstyled-list">
             <li class="ef-nav__item">
-                <a class="ef-nav__link" href="/projects/">
+                <a class="ef-nav__link h2" href="/projects/">
                     <span class="ef-nav__linkText">All work</span>
                 </a></li>
     </ul></li>
     
             <li class="ef-nav__item">
-                <a class="ef-nav__link" href="/#about">
+                <a class="ef-nav__link h2" href="/#about">
                     <span class="ef-nav__linkText">About</span>
                 </a></li>
     
             <li class="ef-nav__item">
-                <a class="ef-nav__link" href="/#contact">
+                <a class="ef-nav__link h2" href="/#contact">
                     <span class="ef-nav__linkText">Contact</span>
                 </a></li>
     </ul>
@@ -60,7 +63,7 @@
     </div>
     <div class="mb-5">
         <div class="d-flex align-items-center flex-wrap mb-n2">
-            <a href="/projects/" class="ef-chip py-1 px-2 action-font mb-2">All (18)</a>
+            <a href="/projects/" class="ef-chip py-1 px-2 action-font mb-2">All (20)</a>
             
                 <a href="/projects/aftermovies/" class="ef-chip py-1 px-2 action-font mb-2">Aftermovies (2)</a>
             
@@ -68,7 +71,7 @@
             
                 <a href="/projects/concerts-amis-de-l&#39;opl-philharmonie-luxembourg/" class="ef-chip py-1 px-2 action-font mb-2">concerts Amis de l&#39;OPL Philharmonie Luxembourg (2)</a>
             
-                <a href="/projects/expositions-caw-walferdange/" class="ef-chip py-1 px-2 action-font mb-2">Expositions CAW Walferdange (5)</a>
+                <a href="/projects/expositions-caw-walferdange/" class="ef-chip py-1 px-2 action-font mb-2">Expositions CAW Walferdange (7)</a>
             
                 <a href="/projects/travel-clips/" class="ef-chip py-1 px-2 action-font mb-2">Travel clips (1)</a>
             
@@ -89,7 +92,14 @@
             <div class="embed-responsive embed-responsive-16by9">
                 <div class="embed-responsive-item centered-bgi"
                      style="background-image:url(https://img.youtube.com/vi/oSTtGpsF-Yc/hqdefault.jpg);" data-id="oSTtGpsF-Yc">
-                    <span class="ef-videoItem__play contained-bgi"></span>
+                    <span class="ef-videoItem__play">
+                        <svg class="ef-playButton img-fluid" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+	 width="572.611px" height="572.611px" viewBox="0 -10 572.611 572.611" style="enable-background:new 0 -10 572.611 572.611;">
+	<path fill="none" stroke-width="1.5rem" d="M486.413,221.412L122.347,12.916c-52.938-30.318-95.852-5.44-95.852,55.563v415.652c0,61.004,42.914,85.882,95.852,55.563
+			l364.066-208.49C539.351,300.887,539.351,251.731,486.413,221.412z"/>
+</svg>
+
+                    </span>
                 </div>
             </div>
         </div>
@@ -108,7 +118,14 @@
             <div class="embed-responsive embed-responsive-16by9">
                 <div class="embed-responsive-item centered-bgi"
                      style="background-image:url(https://img.youtube.com/vi/UATmeLIlvpU/hqdefault.jpg);" data-id="UATmeLIlvpU">
-                    <span class="ef-videoItem__play contained-bgi"></span>
+                    <span class="ef-videoItem__play">
+                        <svg class="ef-playButton img-fluid" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+	 width="572.611px" height="572.611px" viewBox="0 -10 572.611 572.611" style="enable-background:new 0 -10 572.611 572.611;">
+	<path fill="none" stroke-width="1.5rem" d="M486.413,221.412L122.347,12.916c-52.938-30.318-95.852-5.44-95.852,55.563v415.652c0,61.004,42.914,85.882,95.852,55.563
+			l364.066-208.49C539.351,300.887,539.351,251.731,486.413,221.412z"/>
+</svg>
+
+                    </span>
                 </div>
             </div>
         </div>
@@ -138,7 +155,14 @@
             <div class="embed-responsive embed-responsive-16by9">
                 <div class="embed-responsive-item centered-bgi"
                      style="background-image:url(https://img.youtube.com/vi/r884jsTb3aQ/hqdefault.jpg);" data-id="r884jsTb3aQ">
-                    <span class="ef-videoItem__play contained-bgi"></span>
+                    <span class="ef-videoItem__play">
+                        <svg class="ef-playButton img-fluid" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+	 width="572.611px" height="572.611px" viewBox="0 -10 572.611 572.611" style="enable-background:new 0 -10 572.611 572.611;">
+	<path fill="none" stroke-width="1.5rem" d="M486.413,221.412L122.347,12.916c-52.938-30.318-95.852-5.44-95.852,55.563v415.652c0,61.004,42.914,85.882,95.852,55.563
+			l364.066-208.49C539.351,300.887,539.351,251.731,486.413,221.412z"/>
+</svg>
+
+                    </span>
                 </div>
             </div>
         </div>
@@ -157,7 +181,14 @@
             <div class="embed-responsive embed-responsive-16by9">
                 <div class="embed-responsive-item centered-bgi"
                      style="background-image:url(https://img.youtube.com/vi/JS6StY1iY4k/hqdefault.jpg);" data-id="JS6StY1iY4k">
-                    <span class="ef-videoItem__play contained-bgi"></span>
+                    <span class="ef-videoItem__play">
+                        <svg class="ef-playButton img-fluid" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+	 width="572.611px" height="572.611px" viewBox="0 -10 572.611 572.611" style="enable-background:new 0 -10 572.611 572.611;">
+	<path fill="none" stroke-width="1.5rem" d="M486.413,221.412L122.347,12.916c-52.938-30.318-95.852-5.44-95.852,55.563v415.652c0,61.004,42.914,85.882,95.852,55.563
+			l364.066-208.49C539.351,300.887,539.351,251.731,486.413,221.412z"/>
+</svg>
+
+                    </span>
                 </div>
             </div>
         </div>
@@ -187,7 +218,14 @@
             <div class="embed-responsive embed-responsive-16by9">
                 <div class="embed-responsive-item centered-bgi"
                      style="background-image:url(https://img.youtube.com/vi/DO10uR_LN6M/hqdefault.jpg);" data-id="DO10uR_LN6M">
-                    <span class="ef-videoItem__play contained-bgi"></span>
+                    <span class="ef-videoItem__play">
+                        <svg class="ef-playButton img-fluid" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+	 width="572.611px" height="572.611px" viewBox="0 -10 572.611 572.611" style="enable-background:new 0 -10 572.611 572.611;">
+	<path fill="none" stroke-width="1.5rem" d="M486.413,221.412L122.347,12.916c-52.938-30.318-95.852-5.44-95.852,55.563v415.652c0,61.004,42.914,85.882,95.852,55.563
+			l364.066-208.49C539.351,300.887,539.351,251.731,486.413,221.412z"/>
+</svg>
+
+                    </span>
                 </div>
             </div>
         </div>
@@ -206,7 +244,14 @@
             <div class="embed-responsive embed-responsive-16by9">
                 <div class="embed-responsive-item centered-bgi"
                      style="background-image:url(https://img.youtube.com/vi/JRh1FVwWup4/hqdefault.jpg);" data-id="JRh1FVwWup4">
-                    <span class="ef-videoItem__play contained-bgi"></span>
+                    <span class="ef-videoItem__play">
+                        <svg class="ef-playButton img-fluid" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+	 width="572.611px" height="572.611px" viewBox="0 -10 572.611 572.611" style="enable-background:new 0 -10 572.611 572.611;">
+	<path fill="none" stroke-width="1.5rem" d="M486.413,221.412L122.347,12.916c-52.938-30.318-95.852-5.44-95.852,55.563v415.652c0,61.004,42.914,85.882,95.852,55.563
+			l364.066-208.49C539.351,300.887,539.351,251.731,486.413,221.412z"/>
+</svg>
+
+                    </span>
                 </div>
             </div>
         </div>
@@ -225,7 +270,14 @@
             <div class="embed-responsive embed-responsive-16by9">
                 <div class="embed-responsive-item centered-bgi"
                      style="background-image:url(https://img.youtube.com/vi/RcdMENMbz08/hqdefault.jpg);" data-id="RcdMENMbz08">
-                    <span class="ef-videoItem__play contained-bgi"></span>
+                    <span class="ef-videoItem__play">
+                        <svg class="ef-playButton img-fluid" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+	 width="572.611px" height="572.611px" viewBox="0 -10 572.611 572.611" style="enable-background:new 0 -10 572.611 572.611;">
+	<path fill="none" stroke-width="1.5rem" d="M486.413,221.412L122.347,12.916c-52.938-30.318-95.852-5.44-95.852,55.563v415.652c0,61.004,42.914,85.882,95.852,55.563
+			l364.066-208.49C539.351,300.887,539.351,251.731,486.413,221.412z"/>
+</svg>
+
+                    </span>
                 </div>
             </div>
         </div>
@@ -241,6 +293,11 @@
 </div>
 
     </main>
+    <footer class="text-center mt-5 mt-md-10 mb-5">
+    <div class="d-inline-flex rounded-circle overflow-hidden">
+        <button type="button" id="themeSwitcher" class="ef-themeSwitcher position-relative rounded-circle p-0 m-0"></button>
+    </div>
+</footer>
 </div>
     <script src="/js/main.js"></script>
 </body>

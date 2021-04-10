@@ -36,7 +36,7 @@ function openModal(videoTrigger) {
     document.querySelector("BODY").classList.add("overflow-hidden");
     modal.classList.add("-active");
     modal.querySelector("IFRAME").setAttribute("src", "https://www.youtube.com/embed/" + videoTrigger.dataset.id);
-    modal.addEventListener('transitionend', () => {
+    modal.addEventListener('transitionend', function() {
         modal.classList.add("-transitioned")
     });
 }
@@ -46,7 +46,7 @@ function closeModal() {
         document.querySelector("BODY").classList.remove("overflow-hidden");
         modal.classList.remove('-active', '-transitioned');
         modal.querySelector("IFRAME").setAttribute("src", "");
-        modal.addEventListener('transitionend', () => {
+        modal.addEventListener('transitionend', function() {
             modal.classList.remove("-transitioned")
         });
     }
@@ -72,4 +72,41 @@ Array.prototype.forEach.call(youtubeEmbedTrigger, function (el, i) {
             }
         })
     });
+});
+const themeSwitcher = document.querySelector("#themeSwitcher");
+const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
+const currentTheme = localStorage.getItem("theme");
+
+if(!currentTheme) {
+    if (prefersDarkScheme.matches) {
+        document.documentElement.classList.add("dark-theme");
+        localStorage.setItem("theme","dark");
+    } else {
+        document.documentElement.classList.add("light-theme");
+        localStorage.setItem("theme","light");
+    }
+}
+
+
+if (currentTheme == "dark") {
+    document.documentElement.classList.add("dark-theme");
+} else if (currentTheme == "light") {
+    document.documentElement.classList.add("light-theme");
+}
+
+themeSwitcher.addEventListener("click", function () {
+    if (prefersDarkScheme.matches) {
+        document.documentElement.classList.toggle("light-theme");
+        document.documentElement.classList.remove("dark-theme");
+        var theme = document.documentElement.classList.contains("light-theme")
+            ? "light"
+            : "dark";
+    } else {
+        document.documentElement.classList.toggle("dark-theme");
+        document.documentElement.classList.remove("light-theme");
+        var theme = document.documentElement.classList.contains("dark-theme")
+            ? "dark"
+            : "light";
+    }
+    localStorage.setItem("theme", theme);
 });

@@ -12,21 +12,33 @@
 	
 	/* properties of current element  + media queries */
 	
-	display: none;
 	position: fixed;
 	z-index: z("fixed");
-	top: 0;
+	bottom: 100%;
 	left: 0;
 	overflow: auto;
 	width: 100%;
+	max-width: 25rem;
 	height: 100%;
-	opacity: 0.98;
-	font-family: $title-font;
-	@include linear-gradient-to-deg(90deg,$lightblue, 20%, #FFF, 100%);
+	font-family: $action-font;
+	background-color: $action-color;
+	color: #fff;
+	transition: transform 0.25s ease-in;
+	padding: 2em;
+	display: flex;
+	flex-direction: column;
+	justify-content: end;
+	
+	.customproperties & {
+		background-color: var(--THEME-ACTION);
+		color: var(--THEME-ACTION-TEXT);
+	}
 	
 	@include media-breakpoint-up(sm) {
+		bottom: auto;
+		top: 100%;
 		padding-top: 7rem;
-		@include linear-gradient-to-deg(-60deg,$lightblue, 40%, #FFF, 80%);
+		justify-content: start;
 	}
 	
 	@include media-breakpoint-up(md) {
@@ -66,24 +78,31 @@
 	&__subMenu {
 		
 		padding-left: 1rem;
+		margin-top: 1em;
 		
 		#{$self}__link {
 			
 			display: flex;
 			align-items: center;
-			font-size: 0.775em;
 			
 			&::before {
 				
 				content:"";
 				display: block;
 				width: 1em;
-				height: 0.15em;
-				background-color: $crimson;
+				height: 0.125em;
 				margin-right: 0.5em;
+				background-color: #fff;
+				.customproperties & {
+					background-color: var(--THEME-ACTION-TEXT);
+				}
 				
 			}
 			
+		}
+		
+		#{$self}__linkText {
+			font-size: 0.975em;
 		}
 		
 		
@@ -94,12 +113,7 @@
 		
 		// follows same logic as parent
 		
-		margin-bottom: 0.25em;
-		font-size: 13vmin;
-		
-		@include media-breakpoint-up(sm) {
-			font-size: 10vmin;
-		}
+		margin-bottom: 1.25em;
 		
 		&:last-of-type {
 			margin-bottom: 0;
@@ -131,21 +145,15 @@
 	
 	&__link {
 		
-		color: $crimson;
-		padding-left: 1rem;
-		@include media-breakpoint-up(sm) {
-			padding-left: 2rem;
-		}
+		
 		
 		@media (hover:hover) {
 			&:hover {
 				
-				text-decoration: none !important;
-				color: $crimson;
-				
+				//text-decoration: none !important;
 				#{$self}__linkText {
 					
-					background-size: 100% 50%;
+					background-size: 100% 20%;
 					
 				}
 				
@@ -155,8 +163,8 @@
 	}
 	
 	&__linkText {
-		
-		@include textUnderlineGradient(#FFF,0 0.65em,0 50%);
+		--THEME-ACTION: var(--THEME-TEXT);
+		@include textUnderlineGradient(#FFF,0 0.75em,0 20%);
 		transition: background-size 0.25s ease-out;
 		
 	}
@@ -170,7 +178,10 @@
 		
 		// follows same logic as base element
 		
-		display: block;
+		transform: translateY(70%);
+		@include media-breakpoint-up(sm) {
+			transform: translateY(-70%);
+		}
 		
 	}
 	
@@ -213,9 +224,12 @@
 	border-radius: 50%;
 	bottom: 1em;
 	right: 1em;
-	background-color: $crimson;
-	
+	background-color: $action-color;
 	color: #fff;
+	.customproperties & {
+		background-color: var(--THEME-ACTION);
+		color: var(--THEME-ACTION-TEXT);
+	}
 	
 	transition: all 0.2s ease-out;
 	
@@ -248,7 +262,6 @@
 		
 		width: 100%;
 		height: 100%;
-		border: 0.2em solid #fff;
 		border-radius: 50%;
 		transform: scale(0);
 		transform-origin: center;
@@ -257,6 +270,9 @@
 		top: 0;
 		left: 0;
 		background-color: #fff;
+		.customproperties & {
+			background-color: var(--THEME-BG);
+		}
 		transition: all 0.2s ease-out;
 		
 		&::before,
@@ -269,8 +285,10 @@
 			transform: translate(-50%,-50%);
 			height: 50%;
 			width: 0.2em;
-			background-color: $crimson;
-		
+			background-color: $action-color;
+			.customproperties & {
+				background-color: var(--THEME-ACTION);
+			}
 		}
 		
 		&::before {
@@ -295,7 +313,7 @@
 	
 	&.-active {
 		
-		color: $crimson;
+		color: $action-color;
 		
 		#{$self}__close {
 			
@@ -305,4 +323,16 @@
 		
 	}
 	
+}
+
+:target {
+	.#{$namespace}nav__link {
+		
+		.#{$namespace}nav__linkText {
+			
+			background-size: 100% 20%;
+			
+		}
+		
+	}
 }

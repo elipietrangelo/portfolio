@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script>
+        {% include 'src' + paths.assetsPath + paths.jsPath + '/modernizr.js' %}
+    </script>
     {% include "components/assets/stylesheets.njk" %}
     <title>Elisa Pietrangelo - Filmmaker | {{ title }}</title>
     <meta name="description" content="{{ metaDescription }}">
@@ -14,6 +17,7 @@
     <main class="ef-main flex-grow-1 d-flex flex-column">
         {{ content | safe }}
     </main>
+    {% include "components/layout/footer.njk" %}
 </div>
     {% include "components/assets/scripts.njk" %}
 </body>

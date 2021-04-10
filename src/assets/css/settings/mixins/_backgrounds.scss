@@ -32,6 +32,9 @@
 
 @mixin textUnderlineGradient($color,$bgPos,$bgSizePos) {
 	background-image: linear-gradient($color,$color);
+	.customproperties & {
+		background-image: linear-gradient(var(--THEME-ACTION),var(--THEME-ACTION));
+	}
 	background-position: $bgPos;
 	background-repeat: no-repeat;
 	background-size: $bgSizePos;

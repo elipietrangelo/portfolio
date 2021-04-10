@@ -18,7 +18,10 @@
 	&::before {
 		
 		content:"";
-		background-color: $lightblue;
+		background-color: $primary-bg-color;
+		.customproperties & {
+			background-color: var(--THEME-BG-PRIMARY);
+		}
 		padding-top: 9/16*100%;
 		width: 100%;
 		position: absolute;
@@ -66,7 +69,7 @@
 				
 				#{$self}__more {
 					
-					color: $dark;
+					color: inherit;
 					background-size: 100% 50%;
 					
 				}
@@ -88,14 +91,17 @@
 		left: 0.5em;
 		transition: all 0.15s linear;
 		cursor: pointer;
-		background-image: url("#{$mediaPath}play-button.svg");
 		
 	}
 	
 	&__more {
 		
-		color: $crimson;
-		@include textUnderlineGradient($crimson,0 0.9em,0 50%);
+		color: $action-color;
+		@include textUnderlineGradient($action-color,0 0.9em,0 50%);
+		.customproperties & {
+			color: var(--THEME-ACTION);
+			@include textUnderlineGradient(var(--THEME-ACTION),0 0.9em,0 50%);
+		}
 		transition: color 0.25s linear, background-size 0.25s ease-out;
 		font-weight: 900;
 		
@@ -111,10 +117,22 @@
 		
 		color: #FFF;
 		
+		.customproperties & {
+			
+			color: var(--THEME-BG);
+			
+		}
+		
 		&::before {
 			
 			height: 100%;
 			background-color: $dark;
+			
+			.customproperties & {
+				
+				background-color: var(--THEME-TEXT);
+				
+			}
 			
 		}
 		

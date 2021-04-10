@@ -44,14 +44,6 @@
 		}
 	}
 	
-	&__titleInner {
-		@include textUnderlineGradient($lightblue, 0 0.65em, 100% 50%);
-		
-		&.-underlineBlue {
-			@include textUnderlineGradient($lightblue, 0 0.65em, 100% 50%);
-		}
-	}
-	
 	/* modifiers */
 	
 	// section -altStyle

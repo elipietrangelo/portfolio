@@ -8,7 +8,7 @@
     {% if entry.hash === "" and entry.url == page.url %}
         {% else %}
             <li class="ef-nav__item{% if entry.children.length %} -hasChildren{% endif %}{% if entry.hash %}{% else %}{% if entry.url == page.url %} -active{% endif %}{% endif %}">
-                <a class="ef-nav__link" href="{% if entry.url %}{{ entry.url | url }}{% endif %}{% if entry.hash %}{{ '#' + entry.hash }}{% else %}{% endif %}">
+                <a class="ef-nav__link h2" href="{% if entry.url %}{{ entry.url | url }}{% endif %}{% if entry.hash %}{{ '#' + entry.hash }}{% else %}{% endif %}">
                     <span class="ef-nav__linkText">{{ entry.heading }}</span>
                 </a>
                 {%- if entry.children.length -%}
@@ -23,7 +23,7 @@
 
 
 <nav class="ef-nav">
-    <ul class="ef-nav__menu unstyled-list d-flex flex-column justify-content-center m-0 h-100">
+    <ul class="ef-nav__menu unstyled-list m-0">
         {%- for entry in navPages %}{{ renderNavListItem(entry) }}{%- endfor -%}
     </ul>
 </nav>
