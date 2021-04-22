@@ -9,7 +9,7 @@ layout: home
 highlightedVideos:
   - "OPL & Luxtram - Bringing you closer to music. "
   - Core
-  - "Exposition Julien Hübsch "
+  - DKollage - Teaser 1
 permalink: /
 contactText: Don't be shy, follow me and / or say hi!
 workHeading: My Work
