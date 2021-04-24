@@ -37,12 +37,9 @@
 		justify-content: start;
 	}
 	
-	@include media-breakpoint-up(md) {
-		padding-top: 8rem;
-	}
-	
 	@include media-breakpoint-up(lg) {
-		padding-top: 10rem;
+		height: 100%;
+		padding-top: 12rem;
 	}
 	
 	/* Pseudo Elements */

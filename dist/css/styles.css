@@ -10464,12 +10464,10 @@ H2,
     .ef-nav {
       padding-top: 7rem;
       justify-content: start; } }
-  @media (min-width: 768px) {
-    .ef-nav {
-      padding-top: 8rem; } }
   @media (min-width: 992px) {
     .ef-nav {
-      padding-top: 10rem; } }
+      height: 100%;
+      padding-top: 12rem; } }
   .ef-nav__menu {
     margin: 0; }
   .ef-nav__subMenu {
