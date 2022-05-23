@@ -19,5 +19,5 @@ description: >-
   Video edited by Daniel N. Buxton
 tags:
   - Corporate videos
-detail: false
+detail: true
 ---
