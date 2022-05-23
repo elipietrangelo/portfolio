@@ -1,5 +1,5 @@
 ---
-title: DKollage (Teaser 6)
+title: DKollage - Teaser 6
 href: dB5W8p228L4
 description: >-
   Venez découvrir un nouvel espace urbain !
