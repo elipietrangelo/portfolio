@@ -7,5 +7,5 @@ description: |-
   Curatrice Sandra Schwender
 tags:
   - Expositions CAW Walferdange
-detail: true
+detail: false
 ---
