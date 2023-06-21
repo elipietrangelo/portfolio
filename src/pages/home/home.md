@@ -8,7 +8,7 @@ aboutID: about-section
 layout: home
 highlightedVideos:
   - "OPL & Luxtram - Bringing you closer to music. "
-  - CHAMELEON WOMEN FROM UKRAINE
+  - Exposition d'aquarelle 2023
 permalink: /
 contactText: Don't be shy, follow me and / or say hi!
 workHeading: My Work
