@@ -8,7 +8,6 @@ aboutID: about-section
 layout: home
 highlightedVideos:
   - "OPL & Luxtram - Bringing you closer to music. "
-  - Core
   - CHAMELEON WOMEN FROM UKRAINE
 permalink: /
 contactText: Don't be shy, follow me and / or say hi!
