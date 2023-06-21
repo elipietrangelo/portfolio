@@ -7,9 +7,9 @@ subheading: Filmmaker
 aboutID: about-section
 layout: home
 highlightedVideos:
-  - "OPL & Luxtram - Bringing you closer to music. "
-  - Exposition d'aquarelle 2023
   - CORE
+  - Exposition d'aquarelle 2023
+  - "OPL & Luxtram - Bringing you closer to music. "
 permalink: /
 contactText: Don't be shy, follow me and / or say hi!
 workHeading: My Work
