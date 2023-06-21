@@ -9,6 +9,7 @@ layout: home
 highlightedVideos:
   - "OPL & Luxtram - Bringing you closer to music. "
   - Exposition d'aquarelle 2023
+  - CORE
 permalink: /
 contactText: Don't be shy, follow me and / or say hi!
 workHeading: My Work
