@@ -8,7 +8,7 @@ aboutID: about-section
 layout: home
 highlightedVideos:
   - CORE
-  - Exposition d'aquarelle 2023
+  - Exposition Salon d'Auteurs 2023
   - "OPL & Luxtram - Bringing you closer to music. "
 permalink: /
 contactText: Don't be shy, follow me and / or say hi!
