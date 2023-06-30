@@ -1,6 +1,6 @@
 ---
 title: Exposition Salon d'Auteurs 2023
-href: "GeU60moOwNc "
+href: GeU60moOwNc
 description: >-
   Walfer Foto - Frënn 
 
