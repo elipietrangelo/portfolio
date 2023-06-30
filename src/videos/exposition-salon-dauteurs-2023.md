@@ -11,5 +11,5 @@ description: >-
   Martine Calmes, Félianne Fischbach, Patrick Heller, Claude Hostert, Benoît Kunsch,                                   Jean-Michel Lacoste, Ralph Lanners, Sonja et Raymond Mack, Roland Müller, Jos Ney, Martin Patz,        Patrick Scheid, Dan Schmit, Jean-Marie Weiler, Christiane Weis, Barbora Wellens, Viktor Wittal
 tags:
   - Expositions CAW Walferdange
-detail: false
+detail: true
 ---
