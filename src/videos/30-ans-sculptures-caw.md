@@ -1,6 +1,6 @@
 ---
 title: 30 ans Sculptures - CAW
-href: "EC5Sj-bP4QM "
+href: EC5Sj-bP4QM
 description: "Artiste: Jeannot Roller"
 tags:
   - Expositions CAW Walferdange
