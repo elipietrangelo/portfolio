@@ -7,7 +7,7 @@ subheading: Filmmaker
 aboutID: about-section
 layout: home
 highlightedVideos:
-  - CORE
+  - CORE TEASER
   - Exposition Salon d'Auteurs 2023
   - "OPL & Luxtram - Bringing you closer to music. "
 permalink: /
