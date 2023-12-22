@@ -1,6 +1,6 @@
 ---
 title: CORE TEASER
-href: "rSzgMES2BQM "
+href: rSzgMES2BQM
 description: A young reserved and peculiar girl, who is exclude from her
   schoolmates because she sees the world through different eyes, meets a
   homeless and mysterious elderly woman in her small village, who has a unique
