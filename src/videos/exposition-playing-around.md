@@ -1,6 +1,6 @@
 ---
 title: Exposition Playing around
-href: 8dMaIgV11dC
+href: 21NfYkzvekg
 description: Inspirés de photographies et d'icônes de l'industrie de la mode,
   les portraits de Martine Hemmer jettent un regard ironique sur un monde dominé
   par les médias. Les femmes semblent dialoguer avec le spectateur, mais là
