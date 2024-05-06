@@ -1,6 +1,6 @@
 ---
 title: " Exposition Sculptures Jean Bichel & ses amis "
-href: "lGmhbIeMmeU "
+href: lGmhbIeMmeU
 description: >-
   Jean Bichel (1935-2022) Curatrice: Iva Mrazkova 
 
