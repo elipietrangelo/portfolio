@@ -12,8 +12,10 @@
 	/* properties of current element  + media queries */
 	
 	position: relative;
+	flex-grow: 1;
+	height: 95vh;
 	@include media-breakpoint-up(md) {
-		height: 95vh;
+
 	}
 	
 	&::after {
@@ -57,14 +59,18 @@
 		z-index: z("low");
 		font-family: $title-font;
 		font-size: 3rem;
+		width: 100%;
+		text-transform: uppercase;
+		letter-spacing: 0.015em;
+		//background-color: var(--THEME-BG-PRIMARY);
 		
 		@include media-breakpoint-up(sm) {
-			text-align: right;
+			//text-align: right;
 			font-size: 3.5rem;
 		}
 		
 		@include media-breakpoint-up(md) {
-			margin-right: $grid-gutter-width*3;
+			//margin-right: $grid-gutter-width*3;
 		}
 		
 		@include media-breakpoint-up(lg) {
@@ -74,39 +80,59 @@
 		@media screen and (min-width: 1500px) {
 			font-size: 5.5rem;
 		}
-		
+
+	}
+
+	 &__titleSeparator {
+
+		 font-size: 3em;
+		 padding: 1em 0;
+
 	}
 	
 	// hero__title
 	&__subTitle {
-		position: absolute;
-		transform: rotate(-90deg) translateY(100%);
-		transform-origin: bottom left;
+		//position: absolute;
+		//transform: rotate(-90deg) translateY(100%);
+		//transform-origin: bottom left;
 		bottom: 0;
 		left: 0;
 		white-space: nowrap;
 		margin: 0;
-		background-color: $primary-bg-color;
-		padding: 0.25em 0.25em 0.25em 0;
-		.customproperties & {
-			background-color: var(--THEME-BG-PRIMARY);
-		}
+		text-transform: uppercase;
+		padding-right: 0.25em;
+		line-height: 0.75;
 		@include media-breakpoint-up(sm) {
-			transform: rotate(90deg) translate(0);
+			//transform: rotate(90deg) translate(0);
 			right: 0;
 			left: auto;
-			transform-origin: bottom right;
+			//transform-origin: bottom right;
 			padding: 0.35em 0 0.25em 0.25em;
-			background-color: #fff;
+			//background-color: #fff;
+			//.customproperties & {
+			//	background-color: var(--THEME-BG);
+			//}
+			background-color: $primary-bg-color;
 			.customproperties & {
-				background-color: var(--THEME-BG);
+				background-color: var(--THEME-BG-PRIMARY);
 			}
 		}
 	}
-	
+
 	&__subTitleWrapper {
-		position: relative;
-		width: 0;
+
+		position: absolute;
+		bottom: 0;
+		right: 5em;
+
+		//width: 0;
+
+		@include media-breakpoint-up(md) {
+
+			position: relative;
+			margin-top: 150%;
+
+		}
 	}
 	
 	// hero__childElement
@@ -114,9 +140,30 @@
 		
 		// follows same logic as parent
 		display: flex;
-		align-items: flex-end;
-		margin: auto;
+		align-items: center;
 		position: relative;
+		min-width: 5em;
+
+		@include media-breakpoint-up(md) {
+
+			padding-left: 5em;
+			padding-right: 3em;
+			transform: rotate(5deg);
+
+		}
+
+		&::after {
+			
+			content: "";
+			position: absolute;
+			top: 1em;
+			left: 1em;
+			bottom: 1em;
+			width: 2.5em;
+			background: repeating-linear-gradient(var(--THEME-BG) 0em 3em, transparent 3em 4em);
+
+		}	
+
 		&::before {
 			
 			content:"";
@@ -126,36 +173,49 @@
 			}
 			position: absolute;
 			z-index: z("negative");
-			top: -1em;
-			left: -1em;
-			right: -1em;
-			bottom: -1em;
+			inset: 0;
 			transition: all 0.25s linear;
 			
-			@include media-breakpoint-up(sm) {
-				left: 5em;
-				right: -3em;
-				bottom: 5em;
-				top: -50vh;
-			}
-			
-			@include media-breakpoint-up(md) {
-				
-				bottom: 6em;
-				
-			}
+			//@include media-breakpoint-up(sm) {
+			//	left: 5em;
+			//	right: -3em;
+			//	bottom: 5em;
+			//	top: -50vh;
+			//}
+			//
+			//@include media-breakpoint-up(md) {
+			//
+			//	bottom: 6em;
+			//
+			//}
 			
 		}
 		
 		@include media-breakpoint-up(sm) {
-			flex-direction: row-reverse;
+			//flex-direction: row-reverse;
 		}
 		@include media-breakpoint-up(md) {
 			display: flex;
-			align-items: flex-end;
-			margin-left: -$grid-gutter-width*2;
+			margin-left: $grid-gutter-width;
+			height: 90%;
 		}
 		
+	}
+
+	&__more#{$self}__more {
+
+		background-color: $body-color;
+		right: 0;
+		bottom: -0.75em;
+		left: auto;
+		transform: translateX(50%) rotate(-5deg);
+		.customproperties & {
+			background-color: var(--THEME-BG);
+		}
+		border-radius: 50%;
+		align-items: center;
+		justify-content: center;
+
 	}
 	
 	&__img {

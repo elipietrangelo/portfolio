@@ -9839,11 +9839,14 @@ HTML {
 
 HTML,
 BODY {
-  min-height: 100%; }
+  min-height: 100%;
+  display: flex;
+  flex-direction: column; }
 
 BODY {
   background-color: #fff;
   color: #343a40;
+  flex-grow: 1;
   padding-bottom: 5em; }
   .customproperties BODY {
     background-color: var(--THEME-BG);
@@ -10131,6 +10134,8 @@ H2,
   /* variables specific to current element */
   /* properties of current element  + media queries */
   position: relative;
+  flex-grow: 1;
+  height: 95vh;
   /*
 	Include elements that are linked to the current element but have to reside at the root level of the stylesheet
 	(e.g: keyframes)
@@ -10144,9 +10149,6 @@ H2,
 	*   Syntax : .randomParentElt & {}
 	*
 	*/ }
-  @media (min-width: 768px) {
-    .ef-hero {
-      height: 95vh; } }
   .ef-hero__inner {
     position: relative;
     padding: 1em;
@@ -10160,79 +10162,89 @@ H2,
     position: relative;
     z-index: 100;
     font-family: "Anton", sans-serif;
-    font-size: 3rem; }
+    font-size: 3rem;
+    width: 100%;
+    text-transform: uppercase;
+    letter-spacing: 0.015em; }
     @media (min-width: 576px) {
       .ef-hero__title {
-        text-align: right;
         font-size: 3.5rem; } }
-    @media (min-width: 768px) {
-      .ef-hero__title {
-        margin-right: 90px; } }
     @media (min-width: 992px) {
       .ef-hero__title {
         font-size: 4.5rem; } }
     @media screen and (min-width: 1500px) {
       .ef-hero__title {
         font-size: 5.5rem; } }
+  .ef-hero__titleSeparator {
+    font-size: 3em;
+    padding: 1em 0; }
   .ef-hero__subTitle {
-    position: absolute;
-    transform: rotate(-90deg) translateY(100%);
-    transform-origin: bottom left;
     bottom: 0;
     left: 0;
     white-space: nowrap;
     margin: 0;
-    background-color: #5da8ee;
-    padding: 0.25em 0.25em 0.25em 0; }
-    .customproperties .ef-hero__subTitle {
-      background-color: var(--THEME-BG-PRIMARY); }
+    text-transform: uppercase;
+    padding-right: 0.25em;
+    line-height: 0.75; }
     @media (min-width: 576px) {
       .ef-hero__subTitle {
-        transform: rotate(90deg) translate(0);
         right: 0;
         left: auto;
-        transform-origin: bottom right;
         padding: 0.35em 0 0.25em 0.25em;
-        background-color: #fff; }
+        background-color: #5da8ee; }
         .customproperties .ef-hero__subTitle {
-          background-color: var(--THEME-BG); } }
+          background-color: var(--THEME-BG-PRIMARY); } }
   .ef-hero__subTitleWrapper {
-    position: relative;
-    width: 0; }
+    position: absolute;
+    bottom: 0;
+    right: 5em; }
+    @media (min-width: 768px) {
+      .ef-hero__subTitleWrapper {
+        position: relative;
+        margin-top: 150%; } }
   .ef-hero__imgWrapper {
     display: flex;
-    align-items: flex-end;
-    margin: auto;
-    position: relative; }
+    align-items: center;
+    position: relative;
+    min-width: 5em; }
+    @media (min-width: 768px) {
+      .ef-hero__imgWrapper {
+        padding-left: 5em;
+        padding-right: 3em;
+        transform: rotate(5deg); } }
+    .ef-hero__imgWrapper::after {
+      content: "";
+      position: absolute;
+      top: 1em;
+      left: 1em;
+      bottom: 1em;
+      width: 2.5em;
+      background: repeating-linear-gradient(var(--THEME-BG) 0em 3em, transparent 3em 4em); }
     .ef-hero__imgWrapper::before {
       content: "";
       background-color: #5da8ee;
       position: absolute;
       z-index: -10;
-      top: -1em;
-      left: -1em;
-      right: -1em;
-      bottom: -1em;
+      inset: 0;
       transition: all 0.25s linear; }
       .customproperties .ef-hero__imgWrapper::before {
         background-color: var(--THEME-BG-PRIMARY); }
-      @media (min-width: 576px) {
-        .ef-hero__imgWrapper::before {
-          left: 5em;
-          right: -3em;
-          bottom: 5em;
-          top: -50vh; } }
-      @media (min-width: 768px) {
-        .ef-hero__imgWrapper::before {
-          bottom: 6em; } }
-    @media (min-width: 576px) {
-      .ef-hero__imgWrapper {
-        flex-direction: row-reverse; } }
     @media (min-width: 768px) {
       .ef-hero__imgWrapper {
         display: flex;
-        align-items: flex-end;
-        margin-left: -60px; } }
+        margin-left: 30px;
+        height: 90%; } }
+  .ef-hero__more.ef-hero__more {
+    background-color: #0e141c;
+    right: 0;
+    bottom: -0.75em;
+    left: auto;
+    transform: translateX(50%) rotate(-5deg);
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center; }
+    .customproperties .ef-hero__more.ef-hero__more {
+      background-color: var(--THEME-BG); }
   .ef-hero__img {
     max-height: 70vh;
     max-width: 100%; }
@@ -10400,14 +10412,13 @@ H2,
       width: 6em;
       height: 6em; } }
   .ef-more__inner {
-    width: 3em;
-    height: 3em;
+    width: 2em;
+    height: 2em;
     border-width: 0.25em 0.25em 0 0;
     border-style: solid;
     transform: rotate(135deg);
     color: #ad5074;
     position: relative;
-    top: -0.5em;
     transition: all 0.2s ease-out; }
     .customproperties .ef-more__inner {
       color: var(--THEME-ACTION); }
@@ -10416,14 +10427,14 @@ H2,
       right: 0;
       top: -3px;
       position: absolute;
-      width: 4em;
+      width: 3em;
       height: 0.25em;
       box-shadow: inset 0 0 0 32px;
       transform: rotate(-45deg);
       transform-origin: right top; }
   @media (hover: hover) {
     .ef-more:hover .ef-more__inner {
-      transform: translateY(50%) rotate(135deg); } }
+      transform: translateY(10%) rotate(135deg); } }
 
 .ef-nav {
   /* Save root element context for easy access if nesting is needed */

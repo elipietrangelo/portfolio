@@ -1,8 +1,14 @@
 <header class="ef-hero">
 
-    <div class="ef-hero__inner row no-gutters align-items-md-stretch">
+    <div class="ef-hero__inner row no-gutters align-items-md-center flex-nowrap">
 
-        <div class="ef-hero__titeArea col-12 col-md-6 text-sm-right d-md-flex justify-content-md-end align-items-center">
+{#        <div class="ef-hero__titeArea col-12 d-flex align-items-center justify-content-center">#}
+{#            <h1 class="ef-hero__title h1 mb-0">#}
+{#                <span class="d-block">PIETRANGELO</span> <span class="ef-hero__titleSeparator">Elisa</span> <span class="d-block">{{ subheading }}</span>#}
+{#            </h1>#}
+{#        </div>#}
+
+        <div class="ef-hero__titeArea col col-md-6 text-right d-md-flex justify-content-md-end align-items-center">
             <h1 class="ef-hero__title h1 text-md-right mb-0">
                 Elisa <br> Pietrangelo
             </h1>
@@ -10,17 +16,17 @@
 
         <div class="ef-hero__imgWrapper">
             <div class="ef-hero__subTitleWrapper">
-                <h2 class="ef-hero__subTitle h2 m-0 action-font">
+                <h2 class="ef-hero__subTitle h1 m-0 action-font">
                     {{ subheading }}
                 </h2>
             </div>
-            <img class="img-fluid d-block ef-hero__img" src="{{ paths.mediaPath + '/elisa-opt.jpg' }}" alt="Elisa Pietrangelo">
+{#            <img class="img-fluid d-block ef-hero__img" src="{{ paths.mediaPath + '/elisa-opt.jpg' }}" alt="Elisa Pietrangelo">#}
+            <a href="#work" class="ef-hero__more ef-more d-none d-sm-flex">
+                <span class="ef-more__inner"></span>
+            </a>
         </div>
 
-    </div>
 
-    <a href="#work" class="ef-more d-none d-sm-flex align-items-end justify-content-center">
-        <span class="ef-more__inner"></span>
-    </a>
+    </div>
 
 </header>

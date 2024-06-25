@@ -39,16 +39,20 @@
 HTML {
 	scroll-behavior: smooth;
 	overflow-x: hidden;
+
 }
 
 HTML,
 BODY {
 	min-height: 100%;
+	display: flex;
+	flex-direction: column;
 }
 
 BODY {
 	background-color: #fff;
 	color: $dark;
+	flex-grow: 1;
 	.customproperties & {
 		background-color: var(--THEME-BG);
 		color: var(--THEME-TEXT);
