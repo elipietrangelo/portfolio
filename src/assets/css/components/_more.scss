@@ -17,12 +17,17 @@
 	left: 1em;
 	width: 4em;
 	height: 4em;
+
+	@include media-breakpoint-up(sm) {
+
+		width: 5em;
+		height: 5em;
+
+	}
 	
 	@include media-breakpoint-up(md) {
 		
 		left: 2em;
-		width: 5em;
-		height: 5em;
 		
 	}
 	
