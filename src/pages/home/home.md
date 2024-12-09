@@ -8,7 +8,7 @@ aboutID: about-section
 layout: home
 highlightedVideos:
   - CORE TEASER
-  - Painting Photos
+  - Am Berg
   - "OPL & Luxtram - Bringing you closer to music. "
 permalink: /
 contactText: Don't be shy, follow me and / or say hi!
