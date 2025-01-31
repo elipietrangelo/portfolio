@@ -1,5 +1,5 @@
 ---
-title: "DE A TRAVERS LES YEUX DE L'HISTOIRE – SÉBASTIEN SHAHMIRI "
+title: "A TRAVERS LES YEUX DE L'HISTOIRE – SÉBASTIEN SHAHMIRI "
 href: guMM3ZIDpiE
 description: Dans un monde de plus en plus détaché de ses racines, nous prenons
   le risque de perdre les connections profondes que l’Art Historique nous offre.
