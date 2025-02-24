@@ -8,7 +8,6 @@ aboutID: about-section
 layout: home
 highlightedVideos:
   - CORE TEASER
-  - EMPREINTE
   - "OPL & Luxtram - Bringing you closer to music. "
 permalink: /
 contactText: Don't be shy, follow me and / or say hi!
