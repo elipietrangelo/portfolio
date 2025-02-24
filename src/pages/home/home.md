@@ -9,7 +9,6 @@ layout: home
 highlightedVideos:
   - CORE TEASER
   - "OPL & Luxtram - Bringing you closer to music. "
-  - EMPREINTE
 permalink: /
 contactText: Don't be shy, follow me and / or say hi!
 workHeading: My Work
