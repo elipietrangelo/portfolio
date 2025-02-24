@@ -8,7 +8,7 @@ description: >-
   Collectif de graveurs autogéré, fondé en 1994. 
 
 
-  Lieu de création et de rencontre, promotion des techniques traditionnelles de l'estampe,                              cours d'initiation et de spécialisation, accueil d'artistes en résidence,                                                       constitution d'une collection d'oeuvres imprimées, conservées à la BnL.
+  Lieu de création et de rencontre,                                                                                                                  promotion des techniques traditionnelles de l'estampe,                                                                                    cours d'initiation et de spécialisation,                                                                                                                accueil d'artistes en résidence, constitution d'une collection d'oeuvres imprimées,                                conservées à la BnL.
 tags:
   - Corporate videos
 detail: true
