@@ -7,9 +7,9 @@ subheading: Filmmaker
 aboutID: about-section
 layout: home
 highlightedVideos:
+  - "CORE TEASER "
   - EMPREINTE
   - "MIDLIFE TALES "
-  - "CORE TEASER "
 permalink: /
 contactText: Don't be shy, follow me and / or say hi!
 workHeading: My Work
