@@ -7,7 +7,7 @@ subheading: Filmmaker
 aboutID: about-section
 layout: home
 highlightedVideos:
-  - CORE TEASER
+  - "CORE TEASER "
   - EMPREINTE
   - "MIDLIFE TALES "
 permalink: /
