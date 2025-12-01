@@ -9,7 +9,7 @@ layout: home
 highlightedVideos:
   - "CORE TEASER "
   - EMPREINTE
-  - 57e Salon Artistique
+  - CTRL+ALT+MEMORY
 permalink: /
 contactText: Don't be shy, follow me and / or say hi!
 workHeading: My Work
